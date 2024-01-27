@@ -1,7 +1,12 @@
 import type { ProductWishList } from "@/lib/shopify/functions/product/types";
-import type { WishlistProps } from "@/server/cache/shared/wishlist/types";
 
-export type ModalProps = WishlistProps["products"] & {
+export type ModalProps = {
+	title: string;
+	description: string;
+	addToCartButtonLabel: string;
+	clearWishlistLabel: string;
+	saveChangesButtonLabel: string;
+} & {
 	products: ProductWishList[];
 	addToWishList: (id: string, event: any, onlyBoom: boolean) => void;
 	removeFromWishList: (id: string, all?: boolean) => void;

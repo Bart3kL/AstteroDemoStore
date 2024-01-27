@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import type { WishlistProps } from "@/server/cache/shared/wishlist/types";
+import type { EmptyProps } from "./types";
 
 import styles from "./rwd.module.scss";
 const { wrapper, wrapperContent } = styles;
 
-export const Empty = ({ description, icon, title }: WishlistProps["empty"]) => {
+export const Empty = ({ description, icon, title }: EmptyProps) => {
 	return (
 		<div className={wrapper}>
 			<div className={wrapperContent}>
