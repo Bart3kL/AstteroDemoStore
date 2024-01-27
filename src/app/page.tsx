@@ -6,7 +6,7 @@ import { HeroSection } from "@/sections/homePage/Hero";
 import { GuaranteesSection } from "@/sections/homePage/Guarantees";
 import { CollectionsSection } from "@/sections/homePage/Collections";
 import { NewAndDiscountProductsSection } from "@/sections/shared/NewAndDiscountProducts";
-// import { OutfitsSection } from "@/sections/homePage/Outfits";
+import { OutfitsSection } from "@/sections/homePage/Outfits";
 import { RecommendationsSection } from "@/sections/homePage/Recommendations";
 import { BottomCollectionsSection } from "@/sections/homePage/BottomCollections";
 import { OurBrandsSection } from "@/sections/homePage/OurBrands";
@@ -64,7 +64,7 @@ export default async function Home() {
 					newAndDiscountProducts={allHomePage.newAndDiscountProducts}
 					products={productsToArray}
 				/>
-				{/* <OutfitsSection products={productsToArray} outfits={allHomePage.outfits} /> */}
+				<OutfitsSection products={productsToArray} outfits={allHomePage.outfits} />
 				<RecommendationsSection
 					recommendations={allHomePage.recommendations}
 					products={productsToArray}
