@@ -1,0 +1,253 @@
+@import "./variables";
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body {
+	// overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	color: #000;
+}
+
+:where(body:not(.template-root), #header-section, #footer-section, #slide-in-cart-section) {
+	ul {
+		list-style: none;
+	}
+
+	p,
+	ol,
+	ul,
+	li,
+	dl,
+	dt,
+	dd,
+	blockquote,
+	figure,
+	fieldset,
+	legend,
+	textarea,
+	hr,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+		padding: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 100%;
+		font-weight: normal;
+	}
+
+	button,
+	input,
+	select {
+		padding: 0;
+		margin: 0;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+}
+
+html {
+	overflow-x: hidden;
+}
+
+img,
+video {
+	height: auto;
+	max-width: 100%;
+}
+iframe {
+	border: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td,
+th {
+	padding: 0;
+}
+
+input,
+button,
+body {
+	font-family: "Overpass", sans-serif;
+}
+
+button,
+a,
+input,
+label,
+div {
+	-webkit-tap-highlight-color: transparent;
+}
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+pre,
+iframe {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:where(body:not(.template-root), #header-section, #footer-section, #slide-in-cart-section) {
+	ul {
+		list-style: none;
+	}
+
+	p,
+	ol,
+	ul,
+	li,
+	dl,
+	dt,
+	dd,
+	blockquote,
+	figure,
+	fieldset,
+	legend,
+	textarea,
+	hr,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+		padding: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 100%;
+		font-weight: normal;
+	}
+
+	button,
+	input,
+	select {
+		margin: 0;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+}
+
+html {
+	overflow-x: hidden;
+}
+
+img,
+video {
+	height: auto;
+	max-width: 100%;
+}
+iframe {
+	border: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td,
+th {
+	padding: 0;
+}
+
+input,
+button,
+body {
+	font-family: "Overpass", sans-serif;
+}
+
+button,
+a,
+input,
+label,
+div {
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+	width: 20px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #d6dee1;
+	border-radius: 20px;
+	border: 6px solid transparent;
+	background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #a8bbbf;
+}
+
+@keyframes boomSparksBackground {
+	0% {
+		opacity: 1;
+		transform: scale(0.5);
+	}
+	10% {
+		transform: scale(0.75);
+	}
+	20% {
+		transform: scale(1);
+	}
+	30% {
+		transform: scale(1.4);
+	}
+	40% {
+		transform: scale(1.6);
+	}
+	50% {
+		transform: scale(1.8);
+	}
+	60% {
+		transform: scale(2);
+	}
+	70% {
+		transform: scale(2.8);
+	}
+	80% {
+		transform: scale(3);
+	}
+	90% {
+		transform: scale(3.2);
+	}
+	100% {
+		opacity: 0;
+	}
+}

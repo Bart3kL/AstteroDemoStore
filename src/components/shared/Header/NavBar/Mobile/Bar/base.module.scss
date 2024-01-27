@@ -1,0 +1,36 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	height: 57px;
+	padding: 0 15px;
+
+	background-color: $white;
+
+	&Logo {
+		> svg:nth-child(2) {
+			display: none;
+		}
+	}
+
+	&Links {
+		display: flex;
+		align-items: center;
+
+		&Item {
+			padding: 0 10px;
+
+			cursor: pointer;
+		}
+
+		&Item:last-child {
+			padding-right: 0;
+		}
+	}
+}

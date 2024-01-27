@@ -1,0 +1,121 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	margin-top: 10px;
+	max-height: 0;
+
+	padding: 27px 17px 8px 17px;
+	border-radius: 0 0 25px 25px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	background-color: $blue;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-60px);
+
+	transition:
+		opacity 0.3s,
+		transform 0.3s,
+		max-height 0.3s ease-in-out,
+		visibility 0.3s;
+
+	&Active {
+		opacity: 1;
+		visibility: visible;
+		max-height: 64px;
+
+		transform: translateY(-28px);
+	}
+
+	&Quantity {
+		display: flex;
+
+		width: 100%;
+
+		> div:nth-child(1) {
+			display: flex;
+			align-items: center;
+
+			p {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				width: 30px;
+				border: 0;
+
+				font-size: 13px;
+				text-align: center;
+				color: $white;
+			}
+
+			button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 29px;
+				height: 19px;
+				border: 0;
+				border-radius: 20px;
+				background-color: transparent;
+				cursor: pointer;
+
+				svg {
+					width: 17px;
+					height: 13px;
+
+					fill: $white;
+				}
+			}
+		}
+
+		&AddToCart {
+			width: 25px;
+			height: 25px;
+			border: 0;
+			margin-left: 20px;
+			border-radius: 50%;
+
+			background-color: $white;
+
+			cursor: pointer;
+
+			svg {
+				width: 12px;
+				height: 12px;
+
+				path {
+					fill: $blue;
+				}
+			}
+		}
+
+		&SoldOut {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			padding: 4px 7px;
+			border: 0;
+			border-radius: 10px;
+
+			background-color: $dark-gray;
+
+			font-size: 13px;
+
+			color: $white;
+		}
+	}
+	&Trash {
+		svg {
+			color: $red;
+
+			cursor: pointer;
+		}
+	}
+}

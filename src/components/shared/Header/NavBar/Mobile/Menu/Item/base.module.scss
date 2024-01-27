@@ -1,0 +1,54 @@
+@import "../../../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	padding: 17px 0;
+	border-bottom: 1px solid $light-gray-2;
+
+	&Title {
+		display: flex;
+		align-items: center;
+
+		a,
+		p {
+			font-size: 15px;
+			font-weight: 600;
+			color: $dark-gray;
+			text-decoration: none;
+			line-height: 21px;
+		}
+
+		&Active {
+			a,
+			p {
+				color: $blue;
+			}
+		}
+
+		&Badge {
+			height: 16px;
+			margin-left: 9px;
+			padding: 1px 6px;
+			border-radius: 4px;
+
+			background-color: $dark-gray;
+
+			font-size: 9px;
+			font-weight: 600;
+			color: $white;
+
+			&Green {
+				background-color: $green-2;
+			}
+		}
+	}
+
+	> svg {
+		width: 12px;
+		height: 15px;
+	}
+}

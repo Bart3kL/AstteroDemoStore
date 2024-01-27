@@ -1,0 +1,7 @@
+export const ArrowLongLeftSVG = () => {
+	return (
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path d="M11.28 15.7l-1.34 1.37L5 12l4.94-5.07 1.34 1.38-2.68 2.72H19v1.94H8.6z"></path>
+		</svg>
+	);
+};

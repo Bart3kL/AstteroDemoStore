@@ -1,0 +1,100 @@
+@import "../../../../../../../../styles/variables";
+
+.wrapper {
+	max-width: calc(1100px - 590px);
+
+	text-align: center;
+
+	&Title {
+		margin-bottom: 20px;
+
+		font-weight: 700;
+		font-size: 26px;
+		text-transform: capitalize;
+		text-align: center;
+		color: $dark-gray;
+	}
+
+	&Slides {
+		display: flex;
+
+		width: 100%;
+
+		&LeftArrow,
+		&RightArrow {
+			position: absolute;
+			z-index: 100;
+			top: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			height: 45px;
+			width: 45px;
+			border-radius: 50%;
+			box-shadow: 0 0 4px #00000040;
+
+			background-color: $white;
+
+			cursor: pointer;
+			transform: translateY(-50%);
+			transition: all 0.3s;
+
+			svg {
+				width: 9px;
+				height: 16px;
+
+				transition: all 0.3s;
+			}
+		}
+
+		&LeftArrow:hover,
+		&RightArrow:hover {
+			height: 55px;
+			width: 55px;
+
+			background-color: $black;
+
+			svg {
+				width: 11px;
+				height: 18px;
+
+				color: $white;
+			}
+		}
+
+		&LeftArrow {
+			left: 15px;
+		}
+
+		&RightArrow {
+			right: 15px;
+		}
+
+		&Disabled {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+
+	&Btn {
+		height: 40px;
+		margin-top: 20px;
+		border-radius: 20px;
+		border: 0;
+		padding: 7px 30px;
+
+		background-color: $blue;
+
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $white;
+
+		cursor: pointer;
+		transition: background-color 0.3s;
+	}
+
+	&Btn:hover {
+		background-color: $dark-gray;
+	}
+}

@@ -1,0 +1,173 @@
+@use "sass:map";
+@import "../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	border-radius: 15px;
+	border-left: 2px solid $white;
+	border-right: 2px solid $white;
+
+	background-color: $white;
+
+	&Header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		padding: 18px 10px;
+
+		h3 {
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $dark-gray;
+
+			cursor: pointer;
+
+			a {
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+
+			a:hover {
+				color: $blue;
+			}
+		}
+
+		&Price {
+			display: flex;
+			align-items: center;
+
+			p {
+				font-size: 20px;
+				font-weight: bold;
+				color: $dark-gray;
+			}
+
+			p:nth-child(2) {
+				margin-left: 5px;
+
+				font-size: 15px;
+				font-weight: 400;
+				text-decoration: line-through;
+			}
+		}
+	}
+	&Image {
+		position: relative;
+		z-index: 2;
+
+		height: 100vw;
+
+		cursor: pointer;
+
+		a {
+			// position: relative;
+			display: block;
+
+			width: 100%;
+			height: 100%;
+		}
+
+		&Badges {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+
+			&Badge {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				height: 19px;
+				min-width: 35px;
+				margin-top: 10px;
+				padding: 0 5px;
+				border-radius: 5px;
+
+				font-size: 9px;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $white;
+
+				&Green {
+					background-color: $green;
+				}
+
+				&DarkPink {
+					background-color: $dark-pink;
+				}
+			}
+		}
+
+		&Actions {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			right: 10px;
+			top: 10px;
+
+			&InWishlist {
+				svg {
+					path {
+						fill: $blue;
+					}
+				}
+			}
+
+			button {
+				margin-top: 10px;
+				border: 0;
+
+				background-color: transparent;
+
+				cursor: pointer;
+				transition: transform 0.3s;
+			}
+
+			button:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	&Details {
+		display: none;
+		padding: 20px 20px 0 20px;
+
+		> div:nth-child(1) {
+			flex-direction: column;
+
+			span {
+				margin-top: 5px;
+
+				font-size: 12px;
+				color: $dark-gray;
+			}
+		}
+
+		h3 {
+			margin: 10px auto;
+
+			font-weight: 600;
+			text-align: center;
+			color: $dark-gray;
+
+			cursor: pointer;
+			transition: color 0.3s;
+
+			cursor: pointer;
+
+			a {
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+
+			a:hover {
+				color: $blue;
+			}
+		}
+	}
+}

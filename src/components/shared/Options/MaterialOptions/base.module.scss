@@ -1,0 +1,67 @@
+@use "sass:map";
+@import "../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h4 {
+		display: flex;
+
+		margin-bottom: 8px;
+
+		font-size: 12px;
+		font-weight: 600;
+		color: $dark-gray;
+
+		p {
+			margin-left: 5px;
+
+			font-weight: bold;
+		}
+	}
+
+	&Materials {
+		display: flex;
+		flex-wrap: wrap;
+
+		&Big {
+			button {
+				width: 28px;
+				height: 28px;
+
+				img {
+					min-width: 28px;
+					min-height: 28px;
+					padding: 2px;
+				}
+			}
+		}
+
+		&Value {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 22px;
+			height: 22px;
+			margin: 0 2px;
+			border: 0;
+
+			background-color: transparent;
+
+			cursor: pointer;
+
+			img {
+				border-radius: 5px;
+			}
+
+			&Active {
+				border: 1px solid $blue;
+				border-radius: 5px;
+			}
+		}
+	}
+}

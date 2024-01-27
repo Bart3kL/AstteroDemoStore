@@ -1,0 +1,16 @@
+@import "../../../../../styles/variables";
+
+.wrapper {
+	text-decoration: none;
+
+	padding: 0 20px;
+
+	color: $dark-gray;
+
+	transition: color 0.3s;
+	white-space: nowrap;
+
+	&:hover {
+		color: $blue;
+	}
+}

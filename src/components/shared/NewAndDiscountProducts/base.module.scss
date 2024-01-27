@@ -1,0 +1,14 @@
+@import "../../../styles/variables";
+
+.wrapper {
+	padding: 40px 20px;
+
+	background-color: $grayish-blue;
+
+	&Title {
+		font-size: 23px;
+		font-weight: bold;
+		text-align: center;
+		color: $dark-gray;
+	}
+}

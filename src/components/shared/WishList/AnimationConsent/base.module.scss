@@ -1,0 +1,78 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	position: fixed;
+	z-index: 2;
+	bottom: 120px;
+	right: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	height: 100px;
+	width: 220px;
+	padding: 5px;
+	max-width: 374px;
+	border-radius: 25px 0 0 25px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	border: 2px solid $grayish-blue;
+
+	background-color: $white;
+
+	opacity: 0;
+	transform: translateX(230px);
+
+	transition:
+		opacity 0.3s ease-in-out,
+		transform 0.3s ease-in-out;
+
+	&Active {
+		opacity: 1;
+
+		transform: translateX(0);
+	}
+
+	&Close {
+		position: absolute;
+		left: 5px;
+
+		width: 22px;
+		height: 22px;
+
+		cursor: pointer;
+	}
+
+	> p {
+		font-weight: 600;
+		text-align: center;
+		text-transform: capitalize;
+	}
+
+	> div:nth-child(3) {
+		display: flex;
+		justify-content: space-between;
+
+		width: 90%;
+		margin-top: 10px;
+
+		button {
+			padding: 5px 5px;
+			border: 0;
+			border-radius: 5px;
+
+			text-transform: capitalize;
+			color: $white;
+
+			cursor: pointer;
+		}
+
+		> button:nth-child(1) {
+			background-color: $blue;
+		}
+
+		> button:nth-child(2) {
+			background-color: $dark-gray;
+		}
+	}
+}

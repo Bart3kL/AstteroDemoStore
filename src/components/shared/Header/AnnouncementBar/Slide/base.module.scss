@@ -1,0 +1,90 @@
+@import "../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 40px;
+
+	margin: 0;
+	padding: 0 10px;
+
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+	text-align: center;
+
+	cursor: pointer;
+
+	a,
+	div {
+		margin: 0 3px;
+
+		text-decoration: none;
+		color: $white;
+
+		transition: color 0.3s;
+	}
+	a:hover {
+		transition: color 0.3s;
+		color: $black;
+	}
+
+	&Code {
+		display: flex;
+		p {
+			margin-top: 1px;
+			padding-left: 0.5em;
+
+			font-size: 0.7em;
+			color: $dark-gray;
+
+			cursor: pointer;
+
+			&:hover {
+				transition: opacity 0.3s;
+				opacity: 0.5;
+			}
+		}
+	}
+}
+
+.heartbeat {
+	animation: heartbeat 1.5s ease-in-out;
+}
+
+@keyframes heartbeat {
+	from {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transform-origin: center center;
+		transform-origin: center center;
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	10% {
+		-webkit-transform: scale(0.91);
+		transform: scale(0.91);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	17% {
+		-webkit-transform: scale(0.98);
+		transform: scale(0.98);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	33% {
+		-webkit-transform: scale(0.87);
+		transform: scale(0.87);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	45% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+}

@@ -1,0 +1,19 @@
+export const StarSVG = () => {
+	return (
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			strokeWidth="0"
+			viewBox="0 0 16 16"
+			height="1em"
+			width="1em"
+			xmlns="http:https://www.w3.org/2000/svg"
+		>
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M9.595 6.252L8 1 6.405 6.252H1l4.373 3.4L3.75 15 8 11.695 12.25 15l-1.623-5.348L15 6.252H9.595z"
+			></path>
+		</svg>
+	);
+};

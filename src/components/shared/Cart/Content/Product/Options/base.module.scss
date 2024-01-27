@@ -1,0 +1,19 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	&Options {
+		> div {
+			align-items: self-start;
+
+			margin-top: 5px;
+
+			> div {
+				gap: 4px;
+
+				button {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

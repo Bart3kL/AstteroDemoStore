@@ -1,0 +1,147 @@
+@import "../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	border-radius: 25px;
+
+	&Box {
+		position: relative;
+		z-index: 2;
+
+		width: 100%;
+		padding: 10px;
+		border-radius: 25px;
+		box-shadow: 0 0 10px rgb(170 166 166 / 40%);
+
+		background-color: $white;
+
+		&Content {
+			display: flex;
+
+			width: 100%;
+
+			&LeftPart {
+				display: flex;
+				flex-direction: column;
+
+				min-width: 74px;
+
+				img {
+					border-radius: 20px;
+				}
+			}
+
+			&RightPart {
+				display: flex;
+				flex-direction: column;
+
+				width: 100%;
+
+				&FirstLine {
+					display: flex;
+					justify-content: space-between;
+
+					width: 100%;
+
+					&Badge {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						height: 19px;
+						min-width: 35px;
+
+						padding: 0 5px;
+						border-radius: 5px;
+						font-size: 9px;
+						font-weight: bold;
+						text-transform: uppercase;
+						color: $white;
+
+						&Green {
+							background-color: $green;
+						}
+
+						&DarkPink {
+							background-color: $dark-pink;
+						}
+					}
+
+					&Options {
+						border: 0;
+
+						background-color: transparent;
+
+						cursor: pointer;
+
+						> svg {
+							width: 18px;
+							height: 17px;
+						}
+					}
+				}
+
+				&Title {
+					margin-top: 10px;
+
+					font-size: 15px;
+					text-decoration: none;
+
+					cursor: pointer;
+				}
+
+				&VariantTitle {
+					font-size: 13px;
+					text-decoration: none;
+				}
+			}
+		}
+		&Bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+
+			margin: 5px 10px 0 10px;
+
+			&Price {
+				display: flex;
+				flex-direction: column;
+
+				margin-top: auto;
+
+				p {
+					font-size: 20px;
+					font-weight: bold;
+					color: $dark-gray;
+				}
+
+				p:nth-child(2) {
+					font-size: 15px;
+					font-weight: 400;
+					text-decoration: line-through;
+				}
+			}
+
+			&SaveChanges {
+				button {
+					padding: 6px 12px;
+					border-radius: 15px;
+					border: 0;
+
+					background-color: $blue;
+
+					color: $white;
+
+					cursor: pointer;
+					transition: background-color 0.3s;
+
+					&:hover {
+						background-color: $dark-gray;
+					}
+				}
+			}
+		}
+	}
+}

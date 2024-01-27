@@ -1,0 +1,26 @@
+@use "sass:map";
+@import "../../../../../styles/variables";
+@import "./base.module.scss";
+
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+}
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+	.wrapper {
+		&Slides {
+			height: 450px;
+		}
+
+		&SliderThumbs {
+			height: 100px;
+			margin-top: 10px;
+		}
+	}
+}
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+}
+@media only screen and (min-width: map.get($breakpoints, "large-min")) {
+}
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}
+@media only screen and (min-width: map.get($breakpoints, "large-max")) {
+}

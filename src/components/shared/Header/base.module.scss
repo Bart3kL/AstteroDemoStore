@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+
+.wrapper {
+	position: sticky;
+	top: 0;
+	z-index: 103;
+	width: 100%;
+
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+	transition:
+		opacity 0.3s ease-in-out,
+		visibility 0.3s ease-in-out,
+		background-color 0.3s ease-in-out;
+
+	&Hidden {
+		visibility: hidden;
+
+		opacity: 0;
+	}
+}

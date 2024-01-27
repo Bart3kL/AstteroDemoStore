@@ -1,0 +1,24 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../styles/variables";
+
+@media only screen and (min-width: "mini") {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "super-smaller")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+	.wrapper {
+		&Brands {
+			align-items: center;
+			flex-direction: row;
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

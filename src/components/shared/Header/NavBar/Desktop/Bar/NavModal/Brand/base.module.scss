@@ -1,0 +1,20 @@
+@import "../../../../../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+	display: block;
+
+	width: 100px;
+	height: 30px;
+
+	img {
+		transition: transform 0.3s;
+	}
+
+	img:hover {
+		transform: scale(1.1);
+	}
+}
+.wrapper:nth-child(1) {
+	margin-left: -15px;
+}

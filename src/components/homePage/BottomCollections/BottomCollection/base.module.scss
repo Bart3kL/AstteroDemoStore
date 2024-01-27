@@ -1,0 +1,47 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	width: calc(50% - 10px);
+
+	margin-top: 20px;
+	margin-top: 55px;
+
+	text-decoration: none;
+
+	cursor: pointer;
+
+	&Image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			border-radius: 50%;
+			transition: transform 0.3s;
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	h4 {
+		margin-top: 15px;
+
+		font-size: 15px;
+		font-weight: bold;
+		text-align: center;
+		color: $dark-gray;
+	}
+}
+
+.wrapper {
+	&:nth-child(even) {
+		margin-left: 10px;
+	}
+	&:nth-child(odd) {
+		margin-right: 10px;
+	}
+}

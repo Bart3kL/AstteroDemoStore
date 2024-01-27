@@ -1,0 +1,11 @@
+@import "../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	align-items: center;
+
+	&Stars {
+		display: flex;
+		align-items: center;
+	}
+}

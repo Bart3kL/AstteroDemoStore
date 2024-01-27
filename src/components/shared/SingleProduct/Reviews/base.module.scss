@@ -1,0 +1,36 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	margin: 40px 0 50px 0;
+
+	> div:nth-child(1) {
+		margin-right: 0;
+	}
+
+	&Btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+
+		button {
+			max-width: 327px;
+			width: 100%;
+			height: 40px;
+			margin-top: 20px;
+			margin-left: 14px;
+			border-radius: 50px;
+			border: 0;
+
+			background: $blue;
+
+			font-weight: 500;
+
+			font-size: 13px;
+			font-weight: 600;
+			line-height: 16px;
+			color: $white;
+		}
+	}
+}

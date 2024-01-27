@@ -1,0 +1,107 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	position: absolute;
+	top: 57px;
+	left: 0;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	padding: 28px 0;
+	border-radius: 0 0 15px 15px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+	background-color: $white;
+
+	transform: translateY(17px);
+	opacity: 0;
+	pointer-events: none;
+	transition:
+		transform 0s,
+		opacity 0s;
+
+	&Active {
+		transform: translateY(0px);
+		opacity: 1;
+		pointer-events: all;
+
+		transition:
+			transform 0.2s,
+			opacity 0.2s;
+	}
+
+	h4 {
+		font-size: 15px;
+		text-align: center;
+	}
+
+	h3 {
+		margin-top: 10px;
+
+		font-size: 30px;
+		font-weight: 700;
+		text-align: center;
+		line-height: 40px;
+
+		a {
+			text-decoration: none;
+
+			transition: 0.2s color;
+		}
+
+		a:hover {
+			color: $blue;
+		}
+	}
+
+	&Services {
+		display: flex;
+
+		margin-top: 30px;
+		height: 76px;
+		border-top: 1px solid $light-gray-2;
+		border-bottom: 1px solid $light-gray-2;
+
+		background-color: $grayish-blue;
+
+		a:nth-child(1) {
+			border-right: 1px solid $light-gray-2;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 1;
+
+			max-width: 50%;
+
+			font-size: 15px;
+			text-decoration: none;
+
+			transition: 0.2s color;
+
+			svg {
+				path {
+					transition: 0.2s fill;
+				}
+			}
+
+			p {
+				margin-left: 6px;
+			}
+		}
+
+		a:hover {
+			color: $blue;
+
+			svg {
+				path {
+					fill: $blue;
+				}
+			}
+		}
+	}
+}

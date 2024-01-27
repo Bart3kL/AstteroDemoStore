@@ -1,0 +1,35 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "ultra-mini")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+}
+@media only screen and (min-width: 850px) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		height: 250px;
+		&Card {
+			&Content {
+				&Image {
+					width: 40%;
+					height: 150px;
+				}
+				&Details {
+					&Description {
+						display: -webkit-box;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 1250px) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

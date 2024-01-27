@@ -1,0 +1,102 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+	.wrapper {
+		&Content {
+			&FirstLine {
+				font-size: 28px;
+			}
+
+			&SecondLine {
+				font-size: 34px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "super-smaller")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+	.wrapper {
+		&Media {
+			&Mobile {
+				display: none;
+			}
+			&Desktop {
+				display: block;
+			}
+		}
+		&Content {
+			bottom: unset;
+			top: 50%;
+			right: 10vw;
+
+			width: 340px;
+
+			transform: translateY(-50%);
+
+			&FirstLine {
+				font-size: 34px;
+			}
+
+			&SecondLine {
+				font-size: 40px;
+				text-align: center;
+			}
+
+			&Btn {
+				min-width: 190px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		&Content {
+			right: 2%;
+			width: 440px;
+			align-items: flex-start;
+
+			&FirstLine {
+				font-size: 40px;
+			}
+			&SecondLine {
+				font-size: 46px;
+				text-align: unset;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 1250px) {
+	.wrapper {
+		&Content {
+			right: 7%;
+			width: 500px;
+
+			&FirstLine {
+				font-size: 46px;
+			}
+			&SecondLine {
+				font-size: 52px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+	.wrapper {
+		&Content {
+			right: 12%;
+			width: 500px;
+			align-items: left;
+
+			&SecondLine {
+				text-align: unset;
+			}
+		}
+	}
+}

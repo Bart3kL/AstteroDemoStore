@@ -1,0 +1,7 @@
+@use "sass:map";
+
+.noJs {
+	> div:not(:first-child) {
+		display: none;
+	}
+}

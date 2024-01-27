@@ -1,0 +1,36 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&Content {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 42px;
+		height: 42px;
+
+		&Image {
+			position: absolute;
+
+			border: 1px solid $blue;
+			border-radius: 50%;
+
+			min-width: 50px;
+			min-height: 50px;
+			max-width: 50px;
+			max-height: 50px;
+
+			cursor: pointer;
+
+			&Active {
+				border: 3px solid $blue;
+			}
+		}
+	}
+}

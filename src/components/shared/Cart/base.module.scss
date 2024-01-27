@@ -1,0 +1,54 @@
+@import "../../../styles/variables";
+
+.wrapper {
+	position: fixed;
+	z-index: 100002;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+	width: 100%;
+	max-width: 374px;
+
+	background-color: $white;
+
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-100%);
+	transition:
+		opacity 0.3s,
+		visibility 0.3s,
+		transform 0.3s;
+
+	&Active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+		transition:
+			opacity 0.3s,
+			visibility 0.3s,
+			transform 0.3s;
+	}
+
+	&Exit {
+		display: flex;
+		justify-content: flex-end;
+
+		button {
+			border: 0;
+			margin: 10px;
+
+			background-color: transparent;
+
+			cursor: pointer;
+
+			svg {
+				width: 28px;
+				height: 28px;
+			}
+		}
+	}
+}

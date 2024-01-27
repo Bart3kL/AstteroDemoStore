@@ -1,0 +1,21 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+
+	height: 46px;
+
+	background: $green;
+
+	overflow: hidden;
+
+	&Slider {
+		width: 95% !important;
+	}
+
+	&HideOnMobile {
+		display: none;
+	}
+}

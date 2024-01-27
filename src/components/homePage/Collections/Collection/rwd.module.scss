@@ -1,0 +1,68 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+	.wrapper {
+		height: 95vw;
+
+		&Products {
+			height: 15vw;
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "super-smaller")) {
+	.wrapper {
+		height: 90vw;
+
+		&Products {
+			height: 10vw;
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+	.wrapper {
+		height: 50vw;
+		max-height: 520px;
+		width: calc(25% - 20px);
+		margin: 0 10px;
+
+		&:nth-child(1) {
+			margin-left: 10px;
+		}
+		&:nth-last-child(1) {
+			margin-right: 10px;
+		}
+
+		&Image {
+			height: 40vw;
+			max-height: 450px;
+		}
+
+		&Products {
+			max-height: 70px;
+			height: 10vw;
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		&Products {
+			p {
+				font-size: 14px;
+			}
+
+			p:nth-child(1) {
+				font-size: 24px;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 1250px) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

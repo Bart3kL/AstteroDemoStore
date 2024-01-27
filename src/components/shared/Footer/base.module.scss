@@ -1,0 +1,69 @@
+@import "../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+
+	background-color: $blue;
+
+	&Content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding: 0 30px;
+
+		&Header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			> svg {
+				height: 90px;
+				width: 205px;
+
+				g {
+					fill: $white;
+				}
+			}
+
+			> p {
+				margin: 0 30px;
+
+				text-align: center;
+				color: $white;
+			}
+
+			&Icons {
+				display: flex;
+				margin: 50px 0;
+
+				svg {
+					width: 30px;
+					height: 30px;
+					margin: 0 8px;
+
+					path {
+						fill: $white;
+					}
+				}
+			}
+		}
+	}
+
+	&Copyright {
+		margin: 30px 20px 20px 20px;
+
+		font-size: 13px;
+		text-align: center;
+		color: $white;
+	}
+
+	&Payments {
+		margin: 0 30px 65px 30px;
+
+		text-align: center;
+	}
+}

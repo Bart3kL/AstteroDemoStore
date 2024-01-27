@@ -1,0 +1,62 @@
+@use "sass:map";
+@import "../../../styles/variables";
+@import "./base.module.scss";
+
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+	.wrapper {
+		&Image {
+			height: 50vw;
+		}
+	}
+}
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+	.wrapper {
+		&Image {
+			height: 40vw;
+		}
+	}
+}
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		&Image {
+			height: 25vw;
+			max-height: 250px;
+		}
+		&Details {
+			display: block;
+		}
+
+		> div:nth-last-child(2) {
+			position: absolute;
+			bottom: 100px;
+			z-index: 3;
+
+			width: 100%;
+			border-radius: 20px 20px 0 0;
+
+			opacity: 0;
+			transform: translateY(30px);
+
+			transition:
+				transform 0.3s,
+				opacity 0.3s;
+		}
+
+		&:hover {
+			> div:nth-last-child(2) {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			// > div:nth-last-child(3) {
+			// 	display: none;
+			// }
+		}
+	}
+}
+@media only screen and (min-width: map.get($breakpoints, "large-min")) {
+}
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}
+@media only screen and (min-width: map.get($breakpoints, "large-max")) {
+}

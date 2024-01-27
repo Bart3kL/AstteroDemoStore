@@ -1,0 +1,30 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	margin-top: 30px;
+
+	text-decoration: none;
+
+	cursor: pointer;
+
+	&Image {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			border-radius: 20px;
+			transition: transform 0.3s;
+		}
+
+		transition: box-shadow 0.3s;
+
+		&:hover {
+			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+}

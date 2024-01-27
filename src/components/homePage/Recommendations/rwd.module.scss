@@ -1,0 +1,42 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../styles/variables";
+
+@media only screen and (min-width: "mini") {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "super-smaller")) {
+	.wrapper {
+		&Products {
+			&LeftArrow,
+			&RightArrow {
+				width: 45px;
+				height: 45px;
+			}
+			&LeftArrow:hover,
+			&RightArrow:hover {
+				height: 55px;
+				width: 55px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+}
+@media only screen and (min-width: 800px) {
+	.wrapper {
+		> p {
+			margin-bottom: 40px;
+		}
+		&Products {
+			max-width: 740px;
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

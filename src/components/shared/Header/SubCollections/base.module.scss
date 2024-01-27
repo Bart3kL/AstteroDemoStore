@@ -1,0 +1,16 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+
+	width: 100%;
+	padding: 20px 0 5px 0;
+	border-top: 1px solid $light-gray-2;
+
+	background-color: $white;
+
+	overflow-x: scroll;
+	&Content {
+		margin: 0 auto;
+	}
+}

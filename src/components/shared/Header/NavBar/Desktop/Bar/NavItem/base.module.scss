@@ -1,0 +1,71 @@
+@import "../../../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	align-items: center;
+
+	cursor: pointer;
+
+	&:hover > div > p {
+		background: $dark-gray;
+
+		transform: translateY(0);
+		transition:
+			transform 0.3s,
+			background 0.3s;
+	}
+
+	&Item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		> a {
+			height: 100%;
+
+			text-decoration: none;
+			color: $white;
+		}
+
+		&Active {
+			height: 50%;
+		}
+
+		&Badge {
+			position: absolute;
+			right: -8px;
+			top: -15px;
+
+			height: 16px;
+			padding: 1px 6px;
+			border-radius: 4px;
+
+			background-color: $dark-gray;
+
+			font-size: 9px;
+			font-weight: 600;
+			color: $white;
+
+			&Green {
+				background-color: $green-2;
+			}
+		}
+
+		&Line {
+			width: 100%;
+			height: 2px;
+			margin-top: 5px;
+
+			transform: translateY(5px);
+			transition:
+				transform 0.3s,
+				background 0.3s;
+
+			&Active {
+				background: $white;
+
+				transform: translateY(0);
+			}
+		}
+	}
+}

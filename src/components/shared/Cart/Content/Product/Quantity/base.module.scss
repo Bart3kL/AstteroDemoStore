@@ -1,0 +1,48 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	margin-top: auto;
+
+	> div:nth-child(1) {
+		display: flex;
+
+		p {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			width: 30px;
+			border: 0;
+
+			text-align: center;
+
+			color: $dark-pink;
+
+			font-size: 13px;
+		}
+
+		button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 20px;
+			height: 30px;
+			border: 0;
+
+			background-color: transparent;
+
+			cursor: pointer;
+
+			svg {
+				width: 11px;
+				height: 11px;
+			}
+		}
+	}
+
+	&Line {
+		width: 100%;
+		height: 2px;
+	}
+}

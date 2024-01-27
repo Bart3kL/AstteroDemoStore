@@ -1,0 +1,99 @@
+@use "sass:map";
+@import "../../../../styles/variables";
+@import "./base.module.scss";
+
+@media only screen and (min-width: map.get($breakpoints, "ultra-mini")) {
+	.wrapper {
+		top: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		max-width: 375px;
+		margin: 0 auto;
+		height: 90%;
+		border-radius: 15px;
+
+		overflow: unset;
+
+		> div:nth-child(2) {
+			height: 95%;
+			padding-bottom: 35px;
+
+			overflow: auto;
+		}
+
+		&ExitBtn {
+			display: flex;
+		}
+
+		&Exit {
+			display: none;
+		}
+	}
+}
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+}
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+	.wrapper {
+		max-width: 500px;
+	}
+}
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		justify-content: unset;
+
+		max-width: 900px;
+
+		overflow: auto !important;
+
+		&ExitBtn {
+			z-index: 101;
+		}
+
+		&BlockScroll {
+			padding-right: 20px;
+			overflow: hidden !important;
+		}
+
+		> div:nth-child(2) {
+			display: flex;
+
+			overflow: unset !important;
+
+			> div:nth-child(3) {
+				display: flex;
+				flex-direction: column;
+			}
+
+			> div:nth-child(4),
+			> div:nth-child(5),
+			> div:nth-child(6) {
+				display: none;
+			}
+		}
+
+		&DesktopReviews {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			min-height: 332px;
+			overflow: hidden;
+
+			&Hide {
+				overflow: unset;
+			}
+		}
+
+		&Images {
+			min-width: 400px;
+			max-width: 400px;
+		}
+	}
+}
+@media only screen and (min-width: map.get($breakpoints, "large-min")) {
+}
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}
+@media only screen and (min-width: map.get($breakpoints, "large-max")) {
+}

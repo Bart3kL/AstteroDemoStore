@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+
+.wrapper {
+	padding: 40px 20px;
+
+	background-color: $grayish-blue;
+
+	&Content {
+		display: flex;
+		flex-wrap: wrap;
+
+		width: 100%;
+		max-width: 1120px;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,52 @@
+@use "sass:map";
+@import "../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	background-color: $white;
+
+	&Header {
+		padding: 20px 20px 0 20px;
+
+		> div:nth-child(1) {
+			flex-direction: column;
+
+			span {
+				margin-top: 5px;
+
+				font-size: 12px;
+				color: $dark-gray;
+			}
+		}
+
+		h3 {
+			margin: 10px auto;
+
+			font-weight: 600;
+			text-align: center;
+			color: $dark-gray;
+
+			cursor: pointer;
+
+			a {
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+
+			a:hover {
+				color: $blue;
+			}
+		}
+	}
+
+	&Option {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		margin-bottom: 20px;
+	}
+}

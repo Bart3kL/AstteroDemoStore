@@ -1,0 +1,12 @@
+@use "sass:map";
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	border-radius: 15px;
+
+	cursor: pointer;
+
+	&Active {
+		border: 3px solid $blue;
+	}
+}

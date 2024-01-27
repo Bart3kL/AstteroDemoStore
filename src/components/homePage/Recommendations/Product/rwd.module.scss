@@ -1,0 +1,125 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "ultra-mini")) {
+	.wrapper {
+		&Card {
+			&Header {
+				margin-bottom: 15px;
+			}
+
+			&Content {
+				&Details {
+					> h3 {
+						font-size: 18px;
+					}
+
+					&Price {
+						p {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 425px) {
+	.wrapper {
+		&Card {
+			padding: 20px;
+			&Content {
+				&Details {
+					&Rating {
+						display: flex;
+
+						margin-top: 10px;
+
+						> div {
+							flex-direction: row;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 525px) {
+	.wrapper {
+		&Card {
+			&Content {
+				&Details {
+					&Description {
+						display: -webkit-box;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 600px) {
+	.wrapper {
+		&Card {
+			&Content {
+				&Details {
+					&Description {
+						-webkit-line-clamp: 6;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 670px) {
+	.wrapper {
+		&Card {
+			&Content {
+				&Details {
+					&Description {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 800px) {
+	.wrapper {
+		max-height: 480px;
+		&Card {
+			&Content {
+				&Details {
+					&Description {
+						font-size: 14px;
+					}
+
+					> button {
+						display: none;
+					}
+
+					&Options {
+						display: flex;
+					}
+					&AddToCart {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+}
+@media only screen and (min-width: 850px) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+}
+@media only screen and (min-width: 1250px) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

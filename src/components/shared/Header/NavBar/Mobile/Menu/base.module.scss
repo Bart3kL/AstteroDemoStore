@@ -1,0 +1,78 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 104;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: $white;
+
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-100%);
+	transition:
+		opacity 0.3s,
+		visibility 0.3s,
+		transform 0.3s;
+
+	&Active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+		transition:
+			opacity 0.3s,
+			visibility 0.3s,
+			transform 0.3s;
+	}
+
+	&Exit {
+		display: flex;
+		justify-content: flex-end;
+
+		button {
+			border: 0;
+			margin: 10px;
+
+			background-color: transparent;
+
+			svg {
+				width: 28px;
+				height: 28px;
+			}
+		}
+	}
+	&Content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		margin: 0 55px 0 25px;
+
+		overflow: hidden;
+
+		&Title {
+			font-size: 18px;
+			font-weight: 700;
+			color: $blue;
+			line-height: 24px;
+		}
+
+		&Items {
+			display: flex;
+			flex-direction: column;
+
+			margin-top: 20px;
+
+			transition: transform 0.3s;
+
+			&Inactive {
+				transform: translateX(-120%);
+			}
+		}
+	}
+}

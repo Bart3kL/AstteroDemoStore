@@ -1,0 +1,84 @@
+@import "../../../../../../../styles/variables";
+
+.wrapper {
+	position: fixed;
+	top: 132px;
+	left: 50%;
+
+	display: flex;
+
+	width: 100%;
+	max-width: 1024px;
+	height: 483px;
+	padding: 60px 80px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+	border-radius: 10px;
+
+	background-color: $white;
+
+	transform: translateX(-50%);
+	visibility: hidden;
+	opacity: 0;
+	overflow: auto;
+	cursor: initial;
+	transition:
+		visibility 0.3s,
+		opacity 0.3s;
+
+	&Active {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&Smaller {
+		height: 474px;
+	}
+
+	&SuperSmaller {
+		max-width: 900px;
+		height: 673px;
+	}
+
+	&Box {
+		display: flex;
+		flex-direction: column;
+
+		&Brands {
+			margin-top: 20px;
+
+			&Title {
+				height: 40px;
+
+				font-weight: 700;
+				color: $dark-gray;
+			}
+
+			&List {
+				display: flex;
+			}
+		}
+
+		&Categories {
+			display: flex;
+
+			min-width: 350px;
+			width: 350px;
+
+			&Category {
+				display: flex;
+				flex-direction: column;
+
+				h4 {
+					height: 40px;
+
+					font-weight: 700;
+					color: $dark-gray;
+				}
+			}
+			&Category:nth-child(1) {
+				margin-right: 50px;
+			}
+		}
+	}
+}

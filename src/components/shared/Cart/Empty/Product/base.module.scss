@@ -1,0 +1,113 @@
+@import "../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	border-radius: 25px;
+	padding: 20px 20px 10px 20px;
+
+	&Box {
+		position: relative;
+		z-index: 2;
+
+		width: 100%;
+		padding: 10px;
+		border-radius: 25px;
+		box-shadow: 0 0 10px rgb(203 179 179 / 40%);
+
+		background-color: $white;
+
+		&Content {
+			display: flex;
+
+			width: 100%;
+
+			&LeftPart {
+				display: flex;
+				flex-direction: column;
+
+				min-width: 74px;
+				padding-right: 10px;
+
+				img {
+					border-radius: 20px;
+					width: 100%;
+				}
+
+				&Price {
+					display: flex;
+					flex-direction: column;
+					flex-wrap: wrap;
+
+					margin-top: auto;
+
+					p {
+						font-size: 20px;
+						font-weight: bold;
+						color: $dark-gray;
+					}
+
+					p:nth-child(2) {
+						margin-left: 5px;
+
+						font-size: 15px;
+						font-weight: 400;
+						text-decoration: line-through;
+					}
+				}
+			}
+
+			&RightPart {
+				display: flex;
+				flex-direction: column;
+
+				&FirstLine {
+					display: flex;
+					justify-content: space-between;
+
+					width: 100%;
+
+					&Badge {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						height: 19px;
+						min-width: 35px;
+
+						padding: 0 5px;
+						border-radius: 5px;
+						font-size: 9px;
+						font-weight: bold;
+						text-transform: uppercase;
+						color: $white;
+
+						&Green {
+							background-color: $green;
+						}
+
+						&DarkPink {
+							background-color: $dark-pink;
+						}
+					}
+				}
+
+				&Title {
+					margin: 10px 0;
+
+					font-size: 15px;
+					text-decoration: none;
+
+					cursor: pointer;
+				}
+
+				&Options {
+					> div {
+						align-items: self-start;
+					}
+				}
+			}
+		}
+	}
+}

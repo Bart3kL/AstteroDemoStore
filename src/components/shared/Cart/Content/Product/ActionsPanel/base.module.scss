@@ -1,0 +1,87 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	margin-top: -48px;
+	max-height: 0;
+
+	padding: 27px 17px 8px 17px;
+	border-radius: 0 0 25px 25px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	background-color: $blue;
+	opacity: 0;
+	visibility: hidden;
+
+	transition:
+		opacity 0.3s,
+		margin 0.3s,
+		max-height 0.3s ease-in-out,
+		visibility 0.3s;
+
+	&Active {
+		opacity: 1;
+		visibility: visible;
+		max-height: 64px;
+
+		margin-top: -19px;
+	}
+
+	&Edit {
+		display: flex;
+		justify-content: center;
+
+		// width: 100%;
+
+		button {
+			display: flex;
+			align-items: center;
+
+			padding: 6px 10px;
+			border: 0;
+			border-radius: 15px;
+
+			background-color: $grayish-blue;
+
+			color: $dark-gray;
+
+			cursor: pointer;
+
+			svg {
+				width: 14px;
+				height: 14px;
+				margin-right: 5px;
+
+				path {
+					fill: $dark-gray;
+				}
+			}
+		}
+	}
+	&Trash {
+		button {
+			display: flex;
+			align-items: center;
+
+			padding: 6px;
+			border: 0;
+			border-radius: 15px;
+
+			background-color: $dark-gray;
+
+			color: $white;
+
+			cursor: pointer;
+
+			svg {
+				width: 14px;
+				height: 14px;
+				// margin-right: 5px;
+			}
+		}
+	}
+}

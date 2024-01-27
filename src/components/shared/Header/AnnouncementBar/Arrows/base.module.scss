@@ -1,0 +1,43 @@
+@import "../../../../../styles/variables";
+
+.wrapper {
+	&LeftArrow,
+	&RightArrow {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		display: flex;
+		align-items: center;
+
+		height: 45px;
+		width: 20px;
+
+		background-color: $green;
+
+		transform: translateY(-50%);
+		cursor: pointer;
+
+		> svg {
+			transition: color 0.3s;
+		}
+	}
+
+	&LeftArrow:hover,
+	&RightArrow:hover {
+		> svg {
+			color: white;
+		}
+	}
+
+	&LeftArrow {
+		left: 0;
+
+		padding-left: 10px;
+	}
+
+	&RightArrow {
+		right: 0;
+
+		padding-right: 10px;
+	}
+}

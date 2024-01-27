@@ -1,0 +1,224 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	width: 100%;
+	height: 60vw;
+	border-radius: 15px;
+	border: 2px solid $grayish-blue;
+
+	background-color: $white;
+
+	&Fade {
+		filter: blur(3px);
+
+		transition: all 0.5s;
+	}
+
+	&Card {
+		display: flex;
+		flex-direction: column;
+
+		height: 100%;
+		width: 100%;
+		padding: 15px;
+
+		&Header {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			height: 37px;
+
+			&Brand {
+				font-size: 12px;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $dark-gray;
+
+				cursor: pointer;
+
+				a {
+					text-decoration: none;
+					transition: color 0.3s;
+				}
+
+				a:hover {
+					color: $blue;
+				}
+				font-size: 12px;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $dark-gray;
+
+				cursor: pointer;
+
+				a {
+					text-decoration: none;
+					transition: color 0.3s;
+				}
+
+				a:hover {
+					color: $blue;
+				}
+			}
+
+			&Actions {
+				display: flex;
+
+				&InWishlist {
+					svg {
+						path {
+							fill: $blue;
+						}
+					}
+				}
+
+				button {
+					border: 0;
+
+					background-color: transparent;
+
+					cursor: pointer;
+					transition: transform 0.3s;
+				}
+
+				button:nth-child(1) {
+					margin-right: 15px;
+				}
+
+				button:hover {
+					transform: scale(1.2);
+				}
+			}
+		}
+
+		&Content {
+			display: flex;
+
+			width: 100%;
+			height: 100%;
+
+			&Image {
+				position: relative;
+
+				width: 40%;
+				height: 100%;
+
+				img {
+					border-radius: 15px;
+				}
+			}
+
+			&Details {
+				display: flex;
+				flex-direction: column;
+
+				width: 60%;
+				margin-left: 15px;
+
+				> h3 {
+					font-size: 14px;
+					a {
+						text-decoration: none;
+					}
+				}
+
+				&Price {
+					display: flex;
+					align-items: center;
+
+					margin: 10px 0;
+
+					p {
+						font-size: 16px;
+						font-weight: bold;
+						color: $dark-gray;
+					}
+
+					p:nth-child(2) {
+						margin-left: 5px;
+
+						font-size: 13px;
+						font-weight: 400;
+						text-decoration: line-through;
+					}
+				}
+
+				&Rating {
+					display: none;
+
+					> div {
+						flex-direction: column;
+					}
+				}
+
+				&Description {
+					width: 90%;
+					margin-top: 15px;
+
+					font-size: 12px;
+
+					display: none;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 3;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+
+				&Options {
+					display: none;
+
+					margin-top: 10px;
+
+					> div {
+						> div {
+							align-items: self-start;
+							> div {
+								align-items: self-start;
+							}
+						}
+					}
+				}
+
+				&AddToCart {
+					position: absolute;
+					bottom: 20px;
+					right: 20px;
+					display: none;
+				}
+
+				> button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					max-width: 327px;
+					width: 100%;
+					height: 30px;
+					min-height: 30px;
+					border-radius: 15px;
+					border: 0;
+					margin-top: auto;
+
+					background: $blue;
+
+					font-size: 11px;
+					font-weight: 600;
+					text-transform: uppercase;
+					color: $white;
+					line-height: 16px;
+
+					transition: background-color 0.3s;
+
+					cursor: pointer;
+
+					&:hover {
+						background-color: $dark-gray;
+					}
+				}
+			}
+		}
+	}
+}

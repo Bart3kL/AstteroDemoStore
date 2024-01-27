@@ -1,0 +1,34 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	display: block;
+	width: calc(33.333% - 20px);
+
+	margin: 20px 10px;
+
+	text-decoration: none;
+
+	cursor: pointer;
+
+	&Image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		max-width: 100px;
+		max-height: 100px;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+}
+
+.wrapper {
+	&:nth-child(even) {
+		margin-left: 10px;
+	}
+	&:nth-child(odd) {
+		margin-right: 10px;
+	}
+}

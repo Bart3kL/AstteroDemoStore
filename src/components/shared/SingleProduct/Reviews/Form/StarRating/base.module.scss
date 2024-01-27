@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+
+  margin-top: -23px;
+
+  &Label {
+    &Input {
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+
+      &Empty {
+        > svg {
+          color: #c4c4c3;
+        }
+      }
+      &Star {
+        > svg {
+          color: yellow;
+        }
+      }
+    }
+
+    svg {
+      margin-right: 7.5px;
+
+      cursor: pointer;
+    }
+  }
+}
