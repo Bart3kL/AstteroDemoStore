@@ -1,0 +1,101 @@
+@import "../../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 24px;
+	width: 100%;
+	max-width: 414px;
+	margin: 20px auto 0 auto;
+	border-radius: 16px;
+	border: 2px solid $white;
+
+	background-color: $white;
+
+	&Default {
+		border: 2px solid $blue;
+	}
+
+	&Address {
+		display: flex;
+		flex-direction: column;
+
+		margin-right: 15px;
+
+		&Name {
+			font-weight: bold;
+		}
+
+		p {
+			font-size: 14px;
+			color: $dark-gray;
+			line-height: 20px;
+			letter-spacing: 0.5px;
+		}
+
+		&Line {
+			p {
+				display: inline;
+
+				margin-right: 5px;
+			}
+		}
+
+		&Btns {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+
+			button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				width: fit-content;
+				height: 32.5px;
+				padding: 8px 14px;
+				border-radius: 100px;
+				border: 0;
+
+				font-weight: bold;
+
+				cursor: pointer;
+			}
+			&Edit {
+				background-color: $dark-gray;
+
+				color: $white;
+			}
+
+			&Default {
+				margin-top: 10px;
+				height: 40px !important;
+				min-width: 78px;
+
+				background-color: $grayish-blue;
+
+				text-transform: capitalize;
+				color: $dark-gray;
+
+				div {
+					border-top-color: $dark-gray;
+				}
+			}
+		}
+	}
+	&Delete {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+
+		width: 20px;
+		border: 0;
+
+		background-color: transparent;
+
+		cursor: pointer;
+	}
+}

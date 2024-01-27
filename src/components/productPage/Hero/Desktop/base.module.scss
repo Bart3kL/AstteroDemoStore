@@ -1,0 +1,13 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	display: none;
+	position: relative;
+	width: 100%;
+
+	padding-bottom: 8px;
+
+	flex-direction: column;
+
+	background-color: $grayish-blue;
+}

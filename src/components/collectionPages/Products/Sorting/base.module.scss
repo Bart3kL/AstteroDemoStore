@@ -1,0 +1,119 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+
+	margin: 15px 0 20px 0;
+
+	&Container {
+		padding-left: 15px;
+
+		&Button {
+			display: flex;
+			align-items: center;
+
+			border: none;
+
+			background-color: transparent;
+
+			outline: none;
+			cursor: pointer;
+
+			&Label {
+				background-color: transparent;
+
+				font-size: 16px;
+				font-weight: 500;
+				color: $black;
+				line-height: 18.4px;
+				letter-spacing: 0.02em;
+
+				transition: color 0.25s ease-in-out;
+
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+
+			svg {
+				margin-left: 8px;
+
+				transform: scaleY(1);
+				transition: transform ease-in 250ms;
+
+				> path {
+					transition: fill 0.25s ease-in-out;
+					fill: $black;
+				}
+			}
+
+			&Active {
+				> svg {
+					transform: scaleY(-1);
+				}
+			}
+		}
+	}
+
+	&Dropdown {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 4;
+		display: grid;
+		grid-template-rows: 0fr;
+
+		width: 200px;
+		border-radius: 0px 0px 10px 10px;
+
+		transform: translate(15px, 100%);
+		transition: grid-template-rows ease-in 150ms;
+
+		&Open {
+			grid-template-rows: 1fr;
+
+			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+		}
+
+		background-color: $white;
+
+		> div {
+			overflow: hidden;
+
+			> div {
+				padding: 16px 27px;
+			}
+		}
+
+		&Element {
+			margin-bottom: 15px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			> button {
+				width: 100%;
+				height: 100%;
+				border: none;
+
+				background-color: transparent;
+
+				font-weight: 400;
+				font-size: 14px;
+				text-transform: capitalize;
+				color: $black;
+				line-height: 16.1px;
+				letter-spacing: 0.02em;
+
+				cursor: pointer;
+				transition: color 0.25s ease-in-out;
+				outline: none;
+
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+}

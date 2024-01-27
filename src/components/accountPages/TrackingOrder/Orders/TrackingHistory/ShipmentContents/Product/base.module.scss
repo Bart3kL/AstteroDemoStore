@@ -1,0 +1,41 @@
+@import "../../../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+
+	width: 100%;
+	padding: 16px 24px;
+	border-bottom: 2px solid #e2e3f6;
+
+	img {
+		width: 90px;
+		height: 90px;
+	}
+
+	&Details {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		margin-left: 24px;
+
+		h3 {
+			font-size: 16px;
+			font-weight: 700;
+
+			line-height: 20px;
+			letter-spacing: 0.5px;
+		}
+
+		p {
+			margin-top: 15px;
+
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: 0.5px;
+		}
+	}
+}
+.wrapper:nth-last-child(1) {
+	border-bottom: 0;
+}

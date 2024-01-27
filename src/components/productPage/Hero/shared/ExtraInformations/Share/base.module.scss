@@ -1,0 +1,57 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+
+	&Title {
+		font-size: 20px;
+		font-weight: 700;
+		text-align: center;
+		text-transform: capitalize;
+		color: $dark-gray;
+	}
+
+	&Product {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin: 20px auto;
+
+		img {
+			border-radius: 10px;
+		}
+
+		h4 {
+			margin-top: 10px;
+
+			text-align: center;
+		}
+	}
+
+	&Socials {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		a {
+			display: block;
+
+			margin-top: 10px;
+
+			svg {
+				width: 30px;
+				height: 30px;
+				margin: 0 8px;
+
+				path {
+					fill: $dark-gray;
+				}
+			}
+		}
+	}
+}

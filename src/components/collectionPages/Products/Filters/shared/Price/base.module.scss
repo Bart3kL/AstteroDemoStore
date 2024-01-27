@@ -1,0 +1,54 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	width: 100%;
+	padding: 30px 5px;
+
+	&Inputs {
+		display: flex;
+		align-items: center;
+
+		margin-top: 15px;
+
+		&Input {
+			display: flex;
+			align-items: center;
+
+			width: 40%;
+			padding: 10px 16px;
+			border: 1px solid $black;
+
+			font-size: 12px;
+			color: $black;
+			line-height: 16px;
+
+			p {
+				margin-right: 10px;
+			}
+
+			input {
+				width: 100%;
+				border: 0;
+
+				background: transparent;
+
+				font-size: 12px;
+				color: $dark-gray;
+				text-align: right;
+				line-height: 16px;
+			}
+
+			input:focus {
+				outline: 2px solid rgba($black, 0.5);
+				outline-offset: 0.3rem;
+			}
+		}
+
+		&SpaceBetween {
+			width: 20%;
+
+			font-size: 20px;
+			text-align: center;
+		}
+	}
+}

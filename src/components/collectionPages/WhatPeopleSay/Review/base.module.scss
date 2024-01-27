@@ -1,0 +1,58 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 100%;
+	padding: 45px 28px;
+	border-radius: 15px;
+	border: 0.3px solid #ebebec;
+	box-shadow: 0 2px 4px rgba(247, 181, 181, 0.12);
+
+	background-color: $white;
+
+	text-decoration: none;
+
+	transition: box-shadow 0.3s;
+
+	&Author {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 30px;
+	}
+
+	&Rating {
+		margin: 20px 0;
+		> div {
+			> span {
+				display: none;
+			}
+		}
+	}
+
+	> img {
+		max-width: 130px;
+		max-height: 130px;
+		border-radius: 50%;
+	}
+
+	&ProductName {
+		margin: 20px 0;
+
+		font-size: 16px;
+
+		line-height: 30px;
+	}
+
+	&Review {
+		font-size: 15px;
+		text-align: center;
+		line-height: 25px;
+	}
+}
+
+.wrapper:hover {
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}

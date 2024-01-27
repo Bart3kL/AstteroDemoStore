@@ -1,0 +1,31 @@
+@import "../../../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	align-items: center;
+
+	width: 100%;
+	overflow-x: hidden;
+
+	margin: 0 15px;
+
+	&PickedItem {
+		display: flex;
+		align-items: center;
+
+		min-width: 39.2px;
+
+		&PickedColor {
+			display: block;
+
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+		}
+
+		&Separator {
+			margin: 0 5px;
+			color: #ccc;
+		}
+	}
+}

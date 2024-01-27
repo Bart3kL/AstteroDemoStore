@@ -1,0 +1,33 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "super-smaller")) {
+	.wrapper {
+		flex-wrap: nowrap;
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		&Payments {
+			> div {
+				> img {
+					height: 24px;
+				}
+			}
+		}
+		&Socials {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

@@ -1,0 +1,121 @@
+@import "../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+
+	border-radius: 25px 25px 0 0;
+
+	background-color: $grayish-blue;
+
+	&Header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding: 20px 10px;
+
+		&Title {
+			margin: 5px 0;
+
+			font-size: 34px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $dark-gray;
+		}
+
+		&Rating {
+			margin: 5px 0;
+
+			> div {
+				svg {
+					width: 19px;
+				}
+				span {
+					margin-top: 2px;
+					margin-left: 5px;
+
+					font-size: 15px;
+					text-transform: lowercase;
+				}
+			}
+		}
+	}
+	&Content {
+		display: flex;
+		gap: 90px;
+
+		width: 100%;
+		max-width: 1150px;
+		margin: 0 auto;
+		padding: 30px 100px;
+
+		&Left {
+			display: flex;
+			flex-direction: column;
+
+			width: 50%;
+
+			&Price {
+				display: flex;
+				align-items: center;
+
+				margin-bottom: 20px;
+
+				p {
+					font-size: 25px;
+					font-weight: bold;
+					color: $dark-gray;
+				}
+
+				p:nth-child(2) {
+					margin-left: 5px;
+
+					font-size: 18px;
+					font-weight: 400;
+					text-decoration: line-through;
+				}
+			}
+			&Description {
+				max-width: 400px;
+				margin: 20px 0;
+
+				font-size: 14px;
+
+				color: $dark-gray;
+				line-height: 26px;
+			}
+		}
+
+		&Right {
+			width: 50%;
+			height: 100%;
+
+			&Options {
+				> div {
+					background-color: transparent;
+
+					> div {
+						align-items: unset;
+						> div {
+							align-items: unset;
+
+							h4 {
+								font-size: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&Guarantees {
+		width: 100%;
+		max-width: 1150px;
+		margin: 0 auto;
+		padding: 0 100px 0 100px;
+	}
+}

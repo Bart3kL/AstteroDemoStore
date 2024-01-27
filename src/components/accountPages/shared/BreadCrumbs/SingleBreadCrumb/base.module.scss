@@ -1,0 +1,24 @@
+@import "../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+
+	font-size: 13px;
+	font-weight: 500;
+	color: $dark-gray;
+
+	a {
+		display: flex;
+		align-items: center;
+
+		text-decoration: none;
+		color: $blue;
+
+		svg {
+			width: 5px;
+			margin-left: 4px;
+
+			color: $dark-pink;
+		}
+	}
+}

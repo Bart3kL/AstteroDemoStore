@@ -1,0 +1,49 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "ultra-mini")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "super-smaller")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		&Content {
+			&Slider {
+				display: none !important;
+			}
+
+			&Grid {
+				display: grid;
+				gap: 50px 10px;
+				grid-template-columns: repeat(4, 1fr);
+
+				width: 100%;
+
+				> div {
+					position: relative;
+
+					width: 100%;
+					min-height: 100%;
+
+					overflow: hidden;
+				}
+			}
+
+			&Dots {
+				display: none;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

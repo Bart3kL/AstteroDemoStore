@@ -1,0 +1,65 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "ultra-mini")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "super-smaller")) {
+	.wrapper {
+		&Content {
+			&Banner {
+				&Title {
+					right: 20%;
+					font-size: 45px;
+
+					&Men {
+						left: 10%;
+					}
+				}
+			}
+			&Description {
+				&Content {
+					h3 {
+						font-size: 23px;
+					}
+
+					> p {
+						font-size: 13px;
+						line-height: 19px;
+					}
+					&Brands {
+						flex-direction: row;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+	.wrapper {
+		&Content {
+			max-width: 1148px;
+			margin: 0 auto;
+
+			&Banner {
+				height: 20vw;
+				max-height: 225px;
+
+				img {
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

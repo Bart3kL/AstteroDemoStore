@@ -1,0 +1,37 @@
+@import "../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	padding-top: 20px;
+	border-top: 1px solid #ced4da;
+
+	&Content {
+		display: flex;
+		flex-direction: column;
+
+		button {
+			display: flex;
+			align-items: center;
+
+			margin: 10px 0;
+
+			display: flex;
+			border: 0;
+
+			background-color: transparent;
+
+			color: $blue;
+
+			svg {
+				height: 19px;
+				width: 23px;
+				margin-right: 10px;
+
+				color: $blue;
+			}
+		}
+	}
+}

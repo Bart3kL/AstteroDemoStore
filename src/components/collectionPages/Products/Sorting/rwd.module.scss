@@ -1,0 +1,54 @@
+@use "sass:map";
+@import "../../../../styles/variables";
+@import "./base.module.scss";
+
+@media only screen and (min-width: map.get($breakpoints, "desktop")) {
+	.wrapper {
+		padding: 15px 0px;
+		margin: 0px 0px 0px 33px;
+
+		z-index: 2;
+
+		&Container {
+			padding-left: 0px;
+
+			&ButtonLabel {
+				font-size: 20px;
+				line-height: 23.6px;
+			}
+		}
+
+		&Dropdown {
+			right: 0;
+			min-width: 243px;
+
+			> div {
+				> div {
+					padding: 21px 20px;
+				}
+			}
+
+			&Element {
+				> button {
+					font-size: 20px;
+					line-height: 26px;
+
+					word-break: keep-all;
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large-min")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

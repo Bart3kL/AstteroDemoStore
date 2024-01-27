@@ -1,0 +1,64 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	gap: 15px;
+
+	padding: 40px 0;
+	width: 100%;
+
+	&Button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 30px;
+		height: 30px;
+		border: none;
+		border-radius: 50%;
+
+		background-color: $dark-gray;
+
+		font-size: 15px;
+		color: $white;
+
+		cursor: pointer;
+		opacity: 0;
+		outline: none;
+
+		&Active {
+			opacity: 1;
+			cursor: pointer;
+		}
+	}
+
+	&PageNumber {
+		border: 0;
+
+		background-color: transparent;
+
+		font-size: 15px;
+		color: $dark-gray;
+
+		opacity: 1;
+		cursor: pointer;
+
+		&:disabled {
+			font-weight: bold;
+			color: $blue;
+		}
+	}
+
+	&PageNumbers {
+		display: flex;
+		gap: 12px;
+
+		&Ellipsis {
+			color: #797979;
+			transform: translateY(4px);
+		}
+	}
+}

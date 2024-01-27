@@ -1,0 +1,42 @@
+@use "../../../../../../styles/variables" as *;
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	&Label {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 59px;
+		height: 32px;
+		padding: 4px 16px;
+		border: 1px solid #b1c3c6;
+		border-radius: 8px;
+
+		color: #b1c3c6;
+		font-weight: 500;
+
+		font-size: 12px;
+		line-height: 18px;
+
+		cursor: pointer;
+
+		&Active {
+			background-color: #b1c3c6;
+
+			color: white;
+		}
+
+		&Error {
+			border-color: #f21010;
+		}
+	}
+}
+.wrapper:nth-child(1) {
+	margin-left: -4px;
+}
+.wrapper:nth-child(5) {
+	margin-right: -4px;
+}

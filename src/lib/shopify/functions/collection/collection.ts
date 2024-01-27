@@ -22,3 +22,16 @@ export async function getCollections(): Promise<any> {
 			: [],
 	}));
 }
+
+export const getCollectionPagesCache = async () => {
+	const collections = await getCollections();
+	return {
+		collectionPages: collections.reduce((accumulator: any, currentValue: any) => {
+			return Object.assign(accumulator, {
+				[`${currentValue.handle}`]: {
+					...currentValue,
+				},
+			});
+		}, {}),
+	};
+};

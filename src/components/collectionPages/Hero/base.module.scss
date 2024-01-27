@@ -1,0 +1,76 @@
+@import "../../../styles/variables";
+
+.wrapper {
+	background-color: $grayish-blue;
+
+	&Content {
+		display: flex;
+		flex-direction: column;
+
+		&Banner {
+			position: relative;
+
+			height: 40vw;
+			margin: 20px;
+
+			img {
+				border-radius: 25px;
+			}
+
+			&Title {
+				position: absolute;
+				right: 10%;
+				top: 50%;
+
+				font-size: 29px;
+				text-align: center;
+				color: $white;
+
+				transform: translateY(-50%);
+
+				&Men {
+					left: 10%;
+				}
+			}
+		}
+		&Description {
+			margin: 20px;
+
+			&Content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				padding: 25px;
+				border-radius: 25px;
+
+				background-color: $white;
+
+				h3 {
+					margin-bottom: 15px;
+
+					font-weight: bold;
+					font-size: 18px;
+					color: $dark-gray;
+				}
+
+				> p {
+					font-size: 12px;
+					text-align: center;
+					color: $dark-pink;
+					line-height: 18px;
+				}
+
+				&Brands {
+					display: flex;
+					flex-direction: column;
+
+					margin-top: 20px;
+					border-radius: 25px;
+
+					background-color: $grayish-blue;
+				}
+			}
+		}
+	}
+}

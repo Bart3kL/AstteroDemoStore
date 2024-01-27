@@ -1,0 +1,48 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "ultra-mini")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+}
+@media only screen and (min-width: 850px) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		width: 272px;
+		height: 220px;
+		&Card {
+			&Content {
+				&Image {
+					height: 125px;
+				}
+
+				&Details {
+					> h3 {
+						font-size: 16px;
+						font-weight: 500;
+						margin-bottom: 10px;
+					}
+
+					&Price {
+						p {
+							font-size: 17px;
+						}
+
+						p:nth-child(2) {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 1250px) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

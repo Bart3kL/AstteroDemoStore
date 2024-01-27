@@ -1,0 +1,55 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-width: 520px;
+	border: 0.3px solid #ebebec;
+	box-shadow: 0 2px 4px rgba(247, 181, 181, 0.12);
+
+	overflow: hidden;
+	transition: border 0.3s;
+
+	img {
+		height: 625px;
+
+		object-fit: cover;
+		object-position: top center;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		img {
+			transform: scale(1.1);
+		}
+	}
+
+	&FullSize {
+		position: absolute;
+		bottom: 30px;
+		right: 30px;
+
+		border: 0;
+		background-color: transparent;
+
+		cursor: pointer;
+		transition: transofrm 0.3s;
+
+		svg {
+			width: 25px;
+			height: 25px;
+
+			path {
+				fill: $dark-gray;
+			}
+		}
+
+		&:hover {
+			svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+}

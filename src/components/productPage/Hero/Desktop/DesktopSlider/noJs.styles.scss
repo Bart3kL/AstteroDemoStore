@@ -1,0 +1,7 @@
+@use "sass:map";
+
+.noJsHero {
+	> div:not(:first-child) {
+		display: none;
+	}
+}

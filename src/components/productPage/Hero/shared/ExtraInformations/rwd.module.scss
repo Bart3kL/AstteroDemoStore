@@ -1,0 +1,58 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+}
+
+@media only screen and (min-width: 620px) {
+	.wrapper {
+		&Content {
+			flex-direction: row;
+
+			> button:not(:nth-child(1)) {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		&Content {
+			flex-direction: column;
+			> button:not(:nth-child(1)) {
+				margin-left: 0;
+			}
+
+			button {
+				width: fit-content;
+
+				color: $dark-gray;
+
+				cursor: pointer;
+				transition: color 0.3s;
+
+				svg {
+					color: $dark-gray;
+
+					transition: color 0.3s;
+				}
+
+				&:hover {
+					color: $blue;
+
+					svg {
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

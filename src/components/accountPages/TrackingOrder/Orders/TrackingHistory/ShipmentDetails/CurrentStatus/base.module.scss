@@ -1,0 +1,68 @@
+@import "../../../../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+
+	width: 100%;
+	max-width: 320px;
+	margin: 24px 0 26px 0;
+
+	&Single {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		min-width: 82px;
+
+		p {
+			margin-top: 6px;
+
+			font-size: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $dark-gray;
+			line-height: 14px;
+			letter-spacing: 1.92px;
+		}
+
+		> svg {
+			height: 27px;
+		}
+	}
+
+	&Line {
+		position: absolute;
+		top: 15px;
+		left: 50%;
+
+		width: 75%;
+		border: 1px dashed $blue;
+
+		transform: translateX(-50%);
+	}
+	&LineActive {
+		position: absolute;
+		top: 15px;
+		left: 14%;
+
+		height: 2px;
+
+		background-color: $dark-gray;
+
+		p {
+			position: absolute;
+			right: 0;
+			top: -4px;
+
+			width: 10.095px;
+			height: 10.167px;
+			border-radius: 50%;
+
+			background: $dark-gray;
+		}
+	}
+}

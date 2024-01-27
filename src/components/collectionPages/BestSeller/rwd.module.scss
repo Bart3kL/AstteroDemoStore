@@ -1,0 +1,92 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "ultra-mini")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "mini")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "super-smaller")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "smaller")) {
+}
+
+@media only screen and (min-width: map.get($breakpoints, "small")) {
+	.wrapper {
+		padding: 0 30px;
+		&Content {
+			flex-direction: row;
+
+			max-width: 1100px;
+			margin: 0 auto 30px auto;
+			padding: 0;
+			border-radius: 35px;
+			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+
+			overflow: hidden;
+
+			&Slider {
+				&Image {
+					min-width: 550px;
+					min-height: 450px;
+					max-height: 600px;
+					border-radius: 35px 0 0 35px;
+
+					transition: transform 0.3s;
+				}
+
+				&Dots {
+					bottom: 10px;
+
+					height: 40px;
+
+					&Dot {
+						width: 9px;
+						height: 9px;
+						border-radius: 50%;
+
+						&Active {
+							width: 30px;
+							border-radius: 10px;
+						}
+					}
+				}
+			}
+
+			&Details {
+				max-width: unset;
+				margin: unset;
+				border-radius: 0 35px 35px 0;
+
+				&Wishlist {
+					right: 27px;
+					top: 28px;
+				}
+
+				&Title {
+					margin-top: 20px;
+
+					font-size: 24px;
+				}
+
+				&Rating {
+					margin: 10px auto 30px auto;
+				}
+
+				&AddToCart {
+					margin-top: auto;
+
+					button {
+						border-radius: 0 0 35px 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: map.get($breakpoints, "large")) {
+}

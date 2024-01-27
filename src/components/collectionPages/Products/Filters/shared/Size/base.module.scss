@@ -1,0 +1,29 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+
+	padding: 30px 5px;
+	gap: 5px;
+
+	&Size {
+		background: #fff;
+		border: 1px solid silver;
+		border-radius: 20px;
+		color: #797979;
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 118%;
+		padding: 6px 30px;
+
+		&Active {
+			background: $dark-gray;
+			border: 1px solid $dark-gray;
+			border-radius: 20px;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+			color: #fff;
+		}
+	}
+}

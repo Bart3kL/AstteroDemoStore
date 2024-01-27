@@ -1,0 +1,53 @@
+@import "../../../styles/variables";
+
+.wrapper {
+	display: inline-block;
+	position: relative;
+
+	&ToolTip {
+		position: absolute;
+		top: -25px;
+		left: 0;
+
+		border-radius: 4px;
+
+		padding: 6px;
+		color: $white;
+		background: $dark-gray;
+		font-size: 14px;
+		z-index: 100;
+		white-space: nowrap;
+
+		opacity: 0;
+		visibility: hidden;
+
+		transition: all 0.3s ease-in-out;
+
+		&::before {
+			content: " ";
+			position: absolute;
+			left: 20%;
+			top: 100%;
+
+			height: 0;
+			width: 0;
+			border: solid transparent;
+			border-width: 6px;
+
+			pointer-events: none;
+
+			transition: all 0.3s ease-in-out;
+		}
+
+		&Active {
+			top: -30px;
+
+			opacity: 1;
+			visibility: visible;
+
+			&::before {
+				border-top-color: black;
+			}
+		}
+	}
+}

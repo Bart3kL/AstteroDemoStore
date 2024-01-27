@@ -1,0 +1,64 @@
+@import "../../../../../../../../styles/variables";
+
+.wrapper {
+	position: relative;
+	display: flex;
+
+	padding-bottom: 24px;
+
+	> p:nth-child(1) {
+		position: relative;
+		z-index: 2;
+
+		min-width: 10px;
+		min-height: 10px;
+		max-width: 10px;
+		max-height: 10px;
+		margin: 4px 22px 0 5px;
+		border-radius: 50%;
+		border: 2px solid $dark-gray;
+
+		background: $white;
+	}
+
+	&Hour {
+		min-width: 70px;
+		margin-right: 13px;
+
+		font-size: 16px;
+		font-weight: 700;
+		color: $dark-gray;
+		line-height: 20px;
+		letter-spacing: 0.5px;
+	}
+
+	&Line {
+		position: absolute;
+		left: 9px;
+
+		width: 2px;
+		height: 100%;
+
+		overflow: hidden;
+	}
+
+	&Details {
+		display: flex;
+		flex-direction: column;
+
+		p {
+			font-size: 16px;
+			font-weight: 700;
+			color: $dark-gray;
+			line-height: 20px;
+			letter-spacing: 0.5px;
+		}
+
+		p:nth-child(2) {
+			margin-top: 15px;
+
+			font-family: unset;
+			font-weight: 400;
+		}
+	}
+}

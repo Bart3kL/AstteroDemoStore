@@ -1,0 +1,69 @@
+@import "../../../../../../styles/variables";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+
+	background-color: $white;
+
+	&Button {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		height: 52px;
+		width: 100%;
+		padding: 0;
+		margin: 10px 0;
+		border-bottom: 1px solid #dadada;
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+
+		background-color: transparent;
+
+		font-weight: 400;
+		font-size: 20px;
+		text-align: left;
+		color: $black;
+		line-height: 118%;
+		letter-spacing: -0.02em;
+
+		white-space: nowrap;
+		cursor: pointer;
+
+		&Opened::before {
+			transform: rotate(45deg) !important;
+		}
+		&Opened::before,
+		&Closed::before {
+			content: "";
+			position: absolute;
+			right: 2px;
+			top: 20px;
+
+			width: 6.91px;
+			height: 6.91px;
+			margin: 0;
+			padding: 0;
+			border: solid #757575;
+			border-width: 0 1px 1px 0;
+			border-radius: 1px;
+
+			transform: rotate(-45deg);
+			transition: transform 0.3s ease-in-out;
+		}
+	}
+
+	&Filter {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		transition: max-height 0.3s ease-in-out;
+		overflow: hidden;
+	}
+}

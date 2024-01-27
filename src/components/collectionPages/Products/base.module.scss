@@ -1,0 +1,80 @@
+@import "../../../styles/variables";
+
+.wrapper {
+	width: 100%;
+	padding: 0 20px;
+
+	background-color: $grayish-blue;
+
+	&Actions {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 20px 0 0 0;
+
+		&Mobile {
+			&Btn {
+				display: flex;
+				align-items: center;
+				border: 0;
+
+				background-color: transparent;
+
+				font-size: 15px;
+				color: $dark-gray;
+			}
+		}
+		&DesktopBtn {
+			display: none;
+			align-items: center;
+			border: 0;
+
+			background-color: transparent;
+
+			font-size: 15px;
+			color: $dark-gray;
+
+			cursor: pointer;
+
+			svg {
+				margin-right: 5px;
+				path {
+					stroke: $dark-gray;
+				}
+			}
+
+			&Active {
+				margin-left: 374px;
+			}
+		}
+	}
+	&ClearFilters {
+		display: flex;
+		justify-content: right;
+
+		max-width: 1100px;
+		margin: 0 auto 30px auto;
+
+		button {
+			border: 0;
+			background-color: transparent;
+
+			line-height: 22px;
+			color: $blue;
+
+			cursor: pointer;
+			transition: color 0.3s;
+		}
+	}
+
+	&Products {
+		display: flex;
+
+		max-width: 1100px;
+		margin: 0 auto;
+		padding-bottom: 50px;
+	}
+}
