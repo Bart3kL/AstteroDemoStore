@@ -1,4 +1,5 @@
 import { type Metadata } from "next";
+import { Suspense } from "react";
 
 import { HeaderSection } from "@/sections/shared/Header";
 import { HeroSection } from "@/sections/homePage/Hero";
@@ -57,24 +58,26 @@ export default async function Home() {
 			<HeaderSection products={productsToArray} />
 			<HeroSection slides={allHomePage.heroSection} />
 			<GuaranteesSection guarantees={allHomePage.guarantees} />
-			<CollectionsSection collections={allHomePage.collections} />
-			<NewAndDiscountProductsSection
-				newAndDiscountProducts={allHomePage.newAndDiscountProducts}
-				products={productsToArray}
-			/>
-			<OutfitsSection products={productsToArray} outfits={allHomePage.outfits} />
-			<RecommendationsSection
-				recommendations={allHomePage.recommendations}
-				products={productsToArray}
-			/>
-			<BottomCollectionsSection collections={allHomePage.bottomCollections} />
-			<OurBrandsSection ourBrands={allHomePage.ourBrands} />
-			<InstagramSection instagram={allHomePage.instagram} />
+			<Suspense>
+				<CollectionsSection collections={allHomePage.collections} />
+				<NewAndDiscountProductsSection
+					newAndDiscountProducts={allHomePage.newAndDiscountProducts}
+					products={productsToArray}
+				/>
+				<OutfitsSection products={productsToArray} outfits={allHomePage.outfits} />
+				<RecommendationsSection
+					recommendations={allHomePage.recommendations}
+					products={productsToArray}
+				/>
+				<BottomCollectionsSection collections={allHomePage.bottomCollections} />
+				<OurBrandsSection ourBrands={allHomePage.ourBrands} />
+				<InstagramSection instagram={allHomePage.instagram} />
 
-			<MobileBottomPanelSection />
-			<WishListSection wishlist={shared.wishlist} products={productsToArray} />
-			<CartSection products={productsToArray} />
-			<OutOfStockNotificationSection />
+				<MobileBottomPanelSection />
+				<WishListSection wishlist={shared.wishlist} products={productsToArray} />
+				<CartSection products={productsToArray} />
+				<OutOfStockNotificationSection />
+			</Suspense>
 		</>
 	);
 }
