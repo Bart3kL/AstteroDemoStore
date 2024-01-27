@@ -1,7 +1,7 @@
 import { type Metadata } from "next";
 import { Suspense } from "react";
 
-import { HeaderSection } from "@/sections/shared/Header";
+// import { HeaderSection } from "@/sections/shared/Header";
 import { HeroSection } from "@/sections/homePage/Hero";
 import { GuaranteesSection } from "@/sections/homePage/Guarantees";
 import { CollectionsSection } from "@/sections/homePage/Collections";
@@ -55,7 +55,7 @@ export default async function Home() {
 
 	return (
 		<>
-			<HeaderSection products={productsToArray} />
+			{/* <HeaderSection products={productsToArray} /> */}
 			<HeroSection slides={allHomePage.heroSection} />
 			<GuaranteesSection guarantees={allHomePage.guarantees} />
 			<Suspense>
