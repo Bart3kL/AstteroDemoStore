@@ -20,6 +20,9 @@ export async function fetchGraphQL<T>({
 					...(query && { query }),
 					...(variables && { variables }),
 				}),
+				next: {
+					revalidate: 1,
+				},
 			},
 		);
 
