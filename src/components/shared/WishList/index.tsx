@@ -8,7 +8,7 @@ import { Modal } from "./Modal";
 import { AnimationConsent } from "./AnimationConsent";
 
 import type { WishListSectionProps } from "@/sections/shared/WishList/types";
-import type { Product, ProductWishList } from "@/lib/shopify/functions/product/types";
+import type { ProductWishList } from "@/lib/shopify/functions/product/types";
 import { getProductsToWishlist } from "./utils";
 import { Icons } from "@/lib";
 import { useWishListState } from "@/lib/zustand/wishlist";
@@ -19,13 +19,7 @@ import styles from "./rwd.module.scss";
 
 const { wrapper, wrapperActive, wrapperExit } = styles;
 
-export const WishList = ({
-	wishlistData,
-	allProducts,
-}: {
-	wishlistData: WishListSectionProps["wishlist"];
-	allProducts: Product[];
-}) => {
+export const WishList = ({ wishlistData }: { wishlistData: WishListSectionProps["wishlist"] }) => {
 	const [isClient, setIsClient] = useState(false);
 	const { handleToggle, isActive, addToWishList, removeFromWishList, variantIds, isAnimation } =
 		useWishListState();
@@ -34,7 +28,7 @@ export const WishList = ({
 
 	const [products, setProducts] = useState<ProductWishList[]>([]);
 	const fetchData = async () => {
-		const data = await getProductsToWishlist({ products: allProducts });
+		const data = await getProductsToWishlist();
 
 		setProducts(data);
 	};

@@ -1,5 +1,3 @@
-import { type Product } from "@/lib/shopify/functions/product/types";
-
 export interface WishListSectionProps {
 	wishlist: {
 		empty: {
@@ -16,5 +14,4 @@ export interface WishListSectionProps {
 			saveChangesButtonLabel: string;
 		};
 	};
-	products: Product[];
 }

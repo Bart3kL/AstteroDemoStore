@@ -1,6 +1,6 @@
 import type { Product, ShopifyProductsOperation } from "../../functions/product/types";
 import { TAGS } from "../../constants";
-import { getProductsQuery } from "../../queries/product";
+import { getProductsQuery, getWishlistProductsQuery } from "../../queries/product";
 import { reshapeProducts, removeEdgesAndNodes } from "../../utils";
 import { shopifyFetch } from "../..";
 
@@ -28,6 +28,27 @@ export async function getProducts({
 
 export const getPreparedProducts = async () => {
 	const products = await getProducts({});
+	return {
+		productPages: products.reduce((accumulator, currentValue) => {
+			return Object.assign(accumulator, {
+				[`${currentValue.handle}`]: {
+					...currentValue,
+				},
+			});
+		}, {}),
+	};
+};
+
+export async function getWishlistProducts(): Promise<Product[]> {
+	const res = await shopifyFetch<ShopifyProductsOperation>({
+		query: getWishlistProductsQuery,
+	});
+
+	return reshapeProducts(removeEdgesAndNodes(res.body.data.products));
+}
+
+export const getPreparedWishlistProducts = async () => {
+	const products = await getWishlistProducts();
 	return {
 		productPages: products.reduce((accumulator, currentValue) => {
 			return Object.assign(accumulator, {

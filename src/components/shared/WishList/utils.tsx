@@ -4,12 +4,12 @@ import { cookies } from "next/headers";
 
 import type { ProductWishList } from "@/lib/shopify/functions/product/types";
 
-import { getPreparedProducts } from "@/lib/shopify/functions/product/products";
+import { getPreparedWishlistProducts } from "@/lib/shopify/functions/product/products";
 
 import { getNumberAfterLastSlash, objectToArray } from "@/lib/utils";
 
-export const getProductsToWishlist = async ({}): Promise<ProductWishList[]> => {
-	const preparedProducts = await getPreparedProducts();
+export const getProductsToWishlist = async () => {
+	const preparedProducts = await getPreparedWishlistProducts();
 
 	const products = objectToArray(preparedProducts.productPages);
 
