@@ -94,7 +94,7 @@ export default async function CategoryPage({
 			<WhatPeopleSaySection products={products.slice(0, 6)} />
 
 			<MobileBottomPanelSection />
-			<WishListSection products={productsToArray} wishlist={shared.wishlist} />
+			<WishListSection wishlist={shared.wishlist} />
 			<CartSection />
 			<OutOfStockNotificationSection />
 		</>

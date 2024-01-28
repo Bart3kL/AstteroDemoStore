@@ -59,7 +59,7 @@ export default async function Login() {
 
 			<NewAndDiscountProductsSection newAndDiscountProducts={allHomePage.newAndDiscountProducts} />
 			<MobileBottomPanelSection />
-			<WishListSection products={productsToArray} wishlist={shared.wishlist} />
+			<WishListSection wishlist={shared.wishlist} />
 			<CartSection />
 		</main>
 	);

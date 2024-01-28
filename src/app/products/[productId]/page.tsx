@@ -117,7 +117,7 @@ export default async function ProductPage({
 			<RecentlyViewedSection products={recentlyViewedProducts ?? []} />
 
 			<MobileBottomPanelSection />
-			<WishListSection products={productsToArray} wishlist={shared.wishlist} />
+			<WishListSection wishlist={shared.wishlist} />
 			<CartSection />
 			<OutOfStockNotificationSection />
 		</>

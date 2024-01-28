@@ -47,7 +47,7 @@ export default async function Register() {
 			<RegisterSection />
 
 			<MobileBottomPanelSection />
-			<WishListSection products={productsToArray} wishlist={shared.wishlist} />
+			<WishListSection wishlist={shared.wishlist} />
 			<CartSection />
 		</main>
 	);
