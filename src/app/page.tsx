@@ -5,26 +5,26 @@ import { HeaderSection } from "@/sections/shared/Header";
 import { HeroSection } from "@/sections/homePage/Hero";
 import { GuaranteesSection } from "@/sections/homePage/Guarantees";
 import { CollectionsSection } from "@/sections/homePage/Collections";
-import { NewAndDiscountProductsSection } from "@/sections/shared/NewAndDiscountProducts";
-import { OutfitsSection } from "@/sections/homePage/Outfits";
-import { RecommendationsSection } from "@/sections/homePage/Recommendations";
+// import { NewAndDiscountProductsSection } from "@/sections/shared/NewAndDiscountProducts";
+// import { OutfitsSection } from "@/sections/homePage/Outfits";
+// import { RecommendationsSection } from "@/sections/homePage/Recommendations";
 import { BottomCollectionsSection } from "@/sections/homePage/BottomCollections";
 import { OurBrandsSection } from "@/sections/homePage/OurBrands";
 import { InstagramSection } from "@/sections/homePage/Instagram";
 
 //shared
-import { WishListSection } from "@/sections/shared/WishList";
+// import { WishListSection } from "@/sections/shared/WishList";
 import { MobileBottomPanelSection } from "@/sections/shared/MobileBottomPanel";
-import { CartSection } from "@/sections/shared/Cart";
+// import { CartSection } from "@/sections/shared/Cart";
 import { OutOfStockNotificationSection } from "@/sections/shared/OutOfStockNotification";
 
-import { getPreparedProducts } from "@/lib/shopify/functions/product/products";
-import { objectToArray } from "@/lib/utils";
+// import { getPreparedProducts } from "@/lib/shopify/functions/product/products";
+// import { objectToArray } from "@/lib/utils";
 import { getHomePageQuery } from "@/lib/contentful/queries/homePage";
-import { getWishlistQuery } from "@/lib/contentful/queries/shared";
+// import { getWishlistQuery } from "@/lib/contentful/queries/shared";
 import { fetchGraphQL } from "@/lib/contentful";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export const metadata: Metadata = {
 	robots: {
@@ -46,21 +46,21 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-	const products = await getPreparedProducts();
+	// const products = await getPreparedProducts();
 
-	const productsToArray = objectToArray(products.productPages);
+	// const productsToArray = objectToArray(products.productPages);
 
 	const { allHomePage } = await fetchGraphQL({ query: getHomePageQuery });
-	const { shared } = await fetchGraphQL({ query: getWishlistQuery });
+	// const { shared } = await fetchGraphQL({ query: getWishlistQuery });
 
 	return (
 		<>
-			<HeaderSection products={productsToArray} />
+			<HeaderSection products={[]} />
 			<HeroSection slides={allHomePage.heroSection} />
 			<GuaranteesSection guarantees={allHomePage.guarantees} />
 			<CollectionsSection collections={allHomePage.collections} />
 			<Suspense>
-				<NewAndDiscountProductsSection
+				{/* <NewAndDiscountProductsSection
 					newAndDiscountProducts={allHomePage.newAndDiscountProducts}
 					products={productsToArray}
 				/>
@@ -68,7 +68,7 @@ export default async function Home() {
 				<RecommendationsSection
 					recommendations={allHomePage.recommendations}
 					products={productsToArray}
-				/>
+				/> */}
 				<BottomCollectionsSection collections={allHomePage.bottomCollections} />
 				<OurBrandsSection ourBrands={allHomePage.ourBrands} />
 				<InstagramSection instagram={allHomePage.instagram} />
@@ -76,8 +76,8 @@ export default async function Home() {
 
 			<MobileBottomPanelSection />
 			<Suspense>
-				<WishListSection wishlist={shared.wishlist} products={productsToArray} />
-				<CartSection products={productsToArray} />
+				{/* <WishListSection wishlist={shared.wishlist} products={productsToArray} />
+				<CartSection products={productsToArray} /> */}
 				<OutOfStockNotificationSection />
 			</Suspense>
 		</>

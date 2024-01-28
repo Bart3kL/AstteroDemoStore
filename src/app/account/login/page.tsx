@@ -5,13 +5,13 @@ import { LoginSection } from "@/sections/accountPages/Login";
 //shared
 import { HeaderSection } from "@/sections/shared/Header";
 import { MobileBottomPanelSection } from "@/sections/shared/MobileBottomPanel";
-// import { CartSection } from "@/sections/shared/Cart";
-// import { WishListSection } from "@/sections/shared/WishList";
+import { CartSection } from "@/sections/shared/Cart";
+import { WishListSection } from "@/sections/shared/WishList";
 
-// import { getPreparedProducts } from "@/lib/shopify/functions/product/products";
-// import { objectToArray } from "@/lib/utils";
-// import { getWishlistQuery } from "@/lib/contentful/queries/shared";
-// import { fetchGraphQL } from "@/lib/contentful";
+import { getPreparedProducts } from "@/lib/shopify/functions/product/products";
+import { objectToArray } from "@/lib/utils";
+import { getWishlistQuery } from "@/lib/contentful/queries/shared";
+import { fetchGraphQL } from "@/lib/contentful";
 
 // export const runtime = "edge";
 
@@ -35,20 +35,20 @@ export const metadata: Metadata = {
 };
 
 export default async function Login() {
-	// const products = await getPreparedProducts();
+	const products = await getPreparedProducts();
 
-	// const productsToArray = objectToArray(products.productPages);
+	const productsToArray = objectToArray(products.productPages);
 
-	// const { shared } = await fetchGraphQL({ query: getWishlistQuery });
+	const { shared } = await fetchGraphQL({ query: getWishlistQuery });
 
 	return (
 		<main>
-			<HeaderSection products={[]} />
+			<HeaderSection products={productsToArray} />
 			<LoginSection />
 
 			<MobileBottomPanelSection />
-			{/* <WishListSection products={productsToArray} wishlist={shared.wishlist} />
-			<CartSection products={productsToArray} /> */}
+			<WishListSection products={productsToArray} wishlist={shared.wishlist} />
+			<CartSection products={productsToArray} />
 		</main>
 	);
 }
