@@ -24,7 +24,7 @@ import { getHomePageQuery } from "@/lib/contentful/queries/homePage";
 import { getWishlistQuery } from "@/lib/contentful/queries/shared";
 import { fetchGraphQL } from "@/lib/contentful";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export const metadata: Metadata = {
 	robots: {
@@ -58,8 +58,8 @@ export default async function Home() {
 			<HeaderSection products={productsToArray} />
 			<HeroSection slides={allHomePage.heroSection} />
 			<GuaranteesSection guarantees={allHomePage.guarantees} />
+			<CollectionsSection collections={allHomePage.collections} />
 			<Suspense>
-				<CollectionsSection collections={allHomePage.collections} />
 				<NewAndDiscountProductsSection
 					newAndDiscountProducts={allHomePage.newAndDiscountProducts}
 					products={productsToArray}
@@ -72,8 +72,10 @@ export default async function Home() {
 				<BottomCollectionsSection collections={allHomePage.bottomCollections} />
 				<OurBrandsSection ourBrands={allHomePage.ourBrands} />
 				<InstagramSection instagram={allHomePage.instagram} />
+			</Suspense>
 
-				<MobileBottomPanelSection />
+			<MobileBottomPanelSection />
+			<Suspense>
 				<WishListSection wishlist={shared.wishlist} products={productsToArray} />
 				<CartSection products={productsToArray} />
 				<OutOfStockNotificationSection />
