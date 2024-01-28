@@ -2,8 +2,8 @@ import type { Product } from "../../../lib/shopify/functions/product/types";
 
 export interface NewAndDiscountProductsProps {
 	newProducts: Product[];
-	newTitle: string;
 	saleProducts: Product[];
+	newTitle: string;
 	saleTitle: string;
 	title: string;
 }

@@ -1,5 +1,5 @@
-import { type Product } from "@/lib/shopify/functions/product/types";
+// import { type Product } from "@/lib/shopify/functions/product/types";
 
 export interface CartSectionProps {
-	products: Product[];
+	// products: Product[];
 }

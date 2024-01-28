@@ -2,18 +2,10 @@ import { Recommendations } from "@/components/homePage/Recommendations";
 
 import type { RecommendationsSectionProps } from "./types";
 
-export const RecommendationsSection = async ({
-	products,
-	recommendations,
-}: RecommendationsSectionProps) => {
-	const recommendationsWithProducts = {
-		...recommendations,
-		products: products.filter((product) => recommendations.products.includes(product.id)),
-	};
-
+export const RecommendationsSection = async ({ recommendations }: RecommendationsSectionProps) => {
 	return (
 		<section>
-			<Recommendations {...recommendationsWithProducts} />
+			<Recommendations {...recommendations} />
 		</section>
 	);
 };
