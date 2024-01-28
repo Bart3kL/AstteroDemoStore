@@ -95,7 +95,7 @@ export default async function CategoryPage({
 
 			<MobileBottomPanelSection />
 			<WishListSection products={productsToArray} wishlist={shared.wishlist} />
-			<CartSection products={productsToArray} />
+			<CartSection />
 			<OutOfStockNotificationSection />
 		</>
 	);

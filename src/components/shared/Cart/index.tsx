@@ -3,10 +3,11 @@
 import { useEffect, useRef } from "react";
 
 import { Curtain } from "../Modal/Curtain";
-// import { Empty } from "./Empty";
+import { Empty } from "./Empty";
 import { Content } from "./Content";
 
 import type { CartProps } from "./types";
+import { saleProducts } from "./saleProducts";
 import { Icons } from "@/lib";
 import { cx } from "@/lib/utils";
 import { useBlockScroll } from "@/lib/hooks/useBlockScroll";
@@ -50,14 +51,12 @@ export const Cart = ({ cart }: CartProps) => {
 					</button>
 				</div>
 				{!cart || cart.lines.length === 0 ? (
-					<div>
-						{/* <Empty
+					<Empty
 						description="You have not added any products yet."
 						icon="https://cdn.shopify.com/s/files/1/0830/0819/2813/files/cart.webp?v=1698231283"
 						title="Your cart is empty"
 						saleProducts={saleProducts}
-					/> */}
-					</div>
+					/>
 				) : (
 					<Content
 						products={cart.lines}

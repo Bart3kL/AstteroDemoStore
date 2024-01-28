@@ -118,7 +118,7 @@ export default async function ProductPage({
 
 			<MobileBottomPanelSection />
 			<WishListSection products={productsToArray} wishlist={shared.wishlist} />
-			<CartSection products={productsToArray} />
+			<CartSection />
 			<OutOfStockNotificationSection />
 		</>
 	);

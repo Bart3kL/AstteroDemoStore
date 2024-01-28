@@ -48,7 +48,7 @@ export default async function Login() {
 
 			<MobileBottomPanelSection />
 			<WishListSection products={productsToArray} wishlist={shared.wishlist} />
-			<CartSection products={productsToArray} />
+			<CartSection />
 		</main>
 	);
 }

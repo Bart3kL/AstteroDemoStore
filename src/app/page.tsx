@@ -18,8 +18,6 @@ import { MobileBottomPanelSection } from "@/sections/shared/MobileBottomPanel";
 import { CartSection } from "@/sections/shared/Cart";
 import { OutOfStockNotificationSection } from "@/sections/shared/OutOfStockNotification";
 
-// import { getPreparedProducts } from "@/lib/shopify/functions/product/products";
-// import { objectToArray } from "@/lib/utils";
 import { getHomePageQuery } from "@/lib/contentful/queries/homePage";
 import { getWishlistQuery } from "@/lib/contentful/queries/shared";
 import { fetchGraphQL } from "@/lib/contentful";
@@ -46,10 +44,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-	// const products = await getPreparedProducts();
-
-	// const productsToArray = objectToArray(products.productPages);
-
 	const { allHomePage } = await fetchGraphQL({ query: getHomePageQuery });
 	const { shared } = await fetchGraphQL({ query: getWishlistQuery });
 
@@ -73,7 +67,7 @@ export default async function Home() {
 			<MobileBottomPanelSection />
 			<Suspense>
 				<WishListSection wishlist={shared.wishlist} products={[]} />
-				<CartSection products={[]} />
+				<CartSection />
 				<OutOfStockNotificationSection />
 			</Suspense>
 		</>

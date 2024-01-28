@@ -1,7 +1,7 @@
-import { type Product } from "@/lib/shopify/functions/product/types";
+// import { type Product } from "@/lib/shopify/functions/product/types";
 
 export interface EmptyProps {
-	saleProducts: Product[];
+	saleProducts: any[];
 	description: string;
 	icon: string;
 	title: string;
