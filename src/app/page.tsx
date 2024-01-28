@@ -22,7 +22,7 @@ import { getHomePageQuery } from "@/lib/contentful/queries/homePage";
 import { getWishlistQuery } from "@/lib/contentful/queries/shared";
 import { fetchGraphQL } from "@/lib/contentful";
 
-// export const runtime = "edge";
+export const runtime = "edge";
 
 export const metadata: Metadata = {
 	robots: {
