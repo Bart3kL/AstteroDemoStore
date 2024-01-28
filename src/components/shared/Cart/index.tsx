@@ -15,10 +15,7 @@ import { useCartState } from "@/lib/zustand/cart";
 import styles from "./rwd.module.scss";
 const { wrapper, wrapperActive, wrapperExit } = styles;
 
-export const Cart = ({
-	cart,
-} // saleProducts
-: CartProps) => {
+export const Cart = ({ cart }: CartProps) => {
 	const quantityRef = useRef(cart?.totalQuantity);
 
 	const cartState = useCartState();
@@ -53,13 +50,14 @@ export const Cart = ({
 					</button>
 				</div>
 				{!cart || cart.lines.length === 0 ? (
-					// 	<Empty
-					// 	description="You have not added any products yet."
-					// 	icon="https://cdn.shopify.com/s/files/1/0830/0819/2813/files/cart.webp?v=1698231283"
-					// 	title="Your cart is empty"
-					// 	saleProducts={saleProducts}
-					// />
-					<div></div>
+					<div>
+						{/* <Empty
+						description="You have not added any products yet."
+						icon="https://cdn.shopify.com/s/files/1/0830/0819/2813/files/cart.webp?v=1698231283"
+						title="Your cart is empty"
+						saleProducts={saleProducts}
+					/> */}
+					</div>
 				) : (
 					<Content
 						products={cart.lines}

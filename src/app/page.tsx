@@ -73,9 +73,7 @@ export default async function Home() {
 			<MobileBottomPanelSection />
 			<Suspense>
 				<WishListSection wishlist={shared.wishlist} products={[]} />
-				<CartSection
-				// products={[]}
-				/>
+				<CartSection products={[]} />
 				<OutOfStockNotificationSection />
 			</Suspense>
 		</>
