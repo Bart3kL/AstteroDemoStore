@@ -40,18 +40,17 @@ export const metadata: Metadata = {
 };
 
 export default async function Login() {
+	const isAuth = cookies().get("userAccessToken");
+
+	if (!isAuth) {
+		redirect("/account/login");
+	}
 	const products = await getPreparedProducts();
 
 	const productsToArray = objectToArray(products.productPages);
 
 	const { allHomePage } = await fetchGraphQL({ query: getHomePageQuery });
 	const { shared } = await fetchGraphQL({ query: getWishlistQuery });
-
-	const isAuth = cookies().get("userAccessToken");
-
-	if (!isAuth) {
-		redirect("/account/login");
-	}
 
 	return (
 		<main>
