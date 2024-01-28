@@ -50,10 +50,7 @@ export default async function Login() {
 			<OrdersSection />
 			<FaqSection />
 
-			<NewAndDiscountProductsSection
-				products={productsToArray}
-				newAndDiscountProducts={allHomePage.newAndDiscountProducts}
-			/>
+			<NewAndDiscountProductsSection newAndDiscountProducts={allHomePage.newAndDiscountProducts} />
 			<MobileBottomPanelSection />
 			<WishListSection products={productsToArray} wishlist={shared.wishlist} />
 			<CartSection products={productsToArray} />
