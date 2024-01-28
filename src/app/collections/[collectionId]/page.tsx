@@ -59,8 +59,6 @@ export default async function CategoryPage({
 		(collection) => collection.handle === params.collectionId,
 	);
 
-	console.log(foundCollection);
-
 	const productss: any = await getPreparedProducts();
 
 	const productsToArray = objectToArray(productss.productPages);
