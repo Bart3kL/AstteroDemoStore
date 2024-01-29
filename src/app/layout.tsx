@@ -1,4 +1,6 @@
 import { Open_Sans } from "next/font/google";
+import NextTopLoader from 'nextjs-toploader';
+
 
 import { FooterSection } from "@/sections/shared/Footer";
 
@@ -10,6 +12,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<body className={openSans.className}>
+			<NextTopLoader />
+
 				<main>{children}</main>
 				<FooterSection />
 			</body>
