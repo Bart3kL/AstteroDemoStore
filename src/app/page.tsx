@@ -13,6 +13,7 @@ import { OurBrandsSection } from "@/sections/homePage/OurBrands";
 import { InstagramSection } from "@/sections/homePage/Instagram";
 
 //shared
+import { Loading } from "@/sections/shared/Loading";
 import { WishListSection } from "@/sections/shared/WishList";
 import { MobileBottomPanelSection } from "@/sections/shared/MobileBottomPanel";
 import { CartSection } from "@/sections/shared/Cart";
@@ -53,7 +54,7 @@ export default async function Home() {
 			<HeroSection slides={allHomePage.heroSection} />
 			<GuaranteesSection guarantees={allHomePage.guarantees} />
 			<CollectionsSection collections={allHomePage.collections} />
-			<Suspense>
+			<Suspense fallback={<Loading />}>
 				<NewAndDiscountProductsSection
 					newAndDiscountProducts={allHomePage.newAndDiscountProducts}
 				/>
@@ -64,8 +65,8 @@ export default async function Home() {
 				<InstagramSection instagram={allHomePage.instagram} />
 			</Suspense>
 
-			<MobileBottomPanelSection />
-			<Suspense>
+			<Suspense fallback={<Loading />}>
+				<MobileBottomPanelSection />
 				<WishListSection wishlist={shared.wishlist} />
 				<CartSection />
 				<OutOfStockNotificationSection />

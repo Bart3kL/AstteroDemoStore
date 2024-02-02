@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import { HeaderSection } from "@/sections/shared/Header";
 import { HeroSection } from "@/sections/collectionPages/Hero";
 import { ProductsSection } from "@/sections/collectionPages/Products";
@@ -9,6 +11,7 @@ import { WishListSection } from "@/sections/shared/WishList";
 import { MobileBottomPanelSection } from "@/sections/shared/MobileBottomPanel";
 import { CartSection } from "@/sections/shared/Cart";
 import { OutOfStockNotificationSection } from "@/sections/shared/OutOfStockNotification";
+import { Loading } from "@/sections/shared/Loading";
 
 import { fetchGraphQL } from "@/lib/contentful";
 import { getWishlistQuery } from "@/lib/contentful/queries/shared";
@@ -90,13 +93,19 @@ export default async function CategoryPage({
 				title={title}
 				preparedFilterParams={preparedFilterParams}
 			/>
-			<BestSellerSection product={bestseller} />
-			<WhatPeopleSaySection products={products.slice(0, 6)} />
 
-			<MobileBottomPanelSection />
-			<WishListSection wishlist={shared.wishlist} />
-			<CartSection />
-			<OutOfStockNotificationSection />
+			<Suspense fallback={<Loading />}>
+				<BestSellerSection product={bestseller} />
+			</Suspense>
+			<Suspense fallback={<Loading />}>
+				<WhatPeopleSaySection products={products.slice(0, 6)} />
+			</Suspense>
+			<Suspense fallback={<Loading />}>
+				<MobileBottomPanelSection />
+				<WishListSection wishlist={shared.wishlist} />
+				<CartSection />
+				<OutOfStockNotificationSection />
+			</Suspense>
 		</>
 	);
 }

@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { Suspense } from "react";
 
 import { HeaderSection } from "@/sections/shared/Header";
 import { HeroSection } from "@/sections/productPage/Hero";
@@ -8,6 +9,7 @@ import { CustomersAlsoPurchasedSection } from "@/sections/productPage/CustomersA
 import { RecentlyViewedSection } from "@/sections/productPage/RecentlyViewed";
 
 //shared
+import { Loading } from "@/sections/shared/Loading";
 import { WishListSection } from "@/sections/shared/WishList";
 import { MobileBottomPanelSection } from "@/sections/shared/MobileBottomPanel";
 import { CartSection } from "@/sections/shared/Cart";
@@ -112,14 +114,23 @@ export default async function ProductPage({
 			<HeaderSection products={productsToArray} />
 			<HeroSection product={currentProduct} currentVariant={currentVariant} bundles={bundles} />
 			<AdditionalInformationsSection />
-			<YouMayAlsoLikeSection products={youMayAlsoLikeProducts} />
-			<CustomersAlsoPurchasedSection products={customersAlsoPurchased} />
-			<RecentlyViewedSection products={recentlyViewedProducts ?? []} />
 
-			<MobileBottomPanelSection />
-			<WishListSection wishlist={shared.wishlist} />
-			<CartSection />
-			<OutOfStockNotificationSection />
+			<Suspense fallback={<Loading />}>
+				<YouMayAlsoLikeSection products={youMayAlsoLikeProducts} />
+			</Suspense>
+			<Suspense fallback={<Loading />}></Suspense>
+			<Suspense fallback={<Loading />}>
+				<CustomersAlsoPurchasedSection products={customersAlsoPurchased} />
+			</Suspense>
+			<Suspense fallback={<Loading />}>
+				<RecentlyViewedSection products={recentlyViewedProducts ?? []} />
+			</Suspense>
+			<Suspense fallback={<Loading />}>
+				<MobileBottomPanelSection />
+				<WishListSection wishlist={shared.wishlist} />
+				<CartSection />
+				<OutOfStockNotificationSection />
+			</Suspense>
 		</>
 	);
 }
